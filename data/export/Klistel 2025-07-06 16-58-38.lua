@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Aegis",
+    ammo="Aurgelmir Orb +1",
+    head={ name="Souv. Schaller +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+65','Attack+25','Magic dmg. taken -4',}},
+    neck="Combatant's Torque",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Brutal Earring",
+    right_ear="Telos Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Warp Ring",
+    back="Null Shawl",
+}

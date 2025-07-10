@@ -1,0 +1,18 @@
+sets.exported={
+    main="Naegling",
+    sub="Nusku Shield",
+    range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},
+    ammo="Chrono Bullet",
+    head="Chass. Tricorne +2",
+    body={ name="Taeon Tabard", augments={'Mag. Evasion+18','Spell interruption rate down -9%','Phalanx +3',}},
+    hands="Rawhide Gloves",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet={ name="Taeon Boots", augments={'Mag. Evasion+19','Spell interruption rate down -8%','Phalanx +3',}},
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},
+    waist="Impulse Belt",
+    left_ear="Halasz Earring",
+    right_ear="Magnetic Earring",
+    left_ring="Weather. Ring",
+    right_ring="Evanescence Ring",
+    back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Snapshot"+10',}},
+}

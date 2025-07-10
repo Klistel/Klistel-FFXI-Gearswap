@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Duban",
+    ammo="Aurgelmir Orb +1",
+    head="Flam. Zucchetto +2",
+    body="Flamma Korazin +2",
+    hands="Flam. Manopolas +2",
+    legs="Sulev. Cuisses +2",
+    feet="Flam. Gambieras +2",
+    neck="Combatant's Torque",
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Brutal Earring",
+    right_ear="Telos Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Petrov Ring",
+    back="Null Shawl",
+}
