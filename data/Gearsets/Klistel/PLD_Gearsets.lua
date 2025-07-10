@@ -66,6 +66,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {body=gear.Relic_Body}) --head="Rev. Coronet +1",
         
         -- add mnd for Chivalry
+        --TODO: Update this set
         sets.precast.JA['Chivalry'] = {
             head="Sulevia's Mask +2",
             neck="Phalaina Locket",
@@ -100,6 +101,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.precast.JA['Aggressor'].DT = set_combine(sets.Enmity.DT, {})
     
         -- Waltz set (chr and vit)
+        --TODO: Update this set
         sets.precast.Waltz = {
             head=gear.Carmine_D_Head,
             body=gear.AF_Body,
@@ -113,7 +115,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
     
         -- Fast cast sets for spells
-        
+        --TODO: Update this set
         sets.precast.FC = {
             ammo="Impatiens",
             head=gear.Carmine_D_Head,
@@ -129,7 +131,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.odyssean_fc_legs,
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update this set
         sets.precast.FC.DT = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_D_Head,
@@ -149,7 +151,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {
             waist="Siegel Sash"
         })
-        
+        --TODO: Update this set
         sets.precast.FC.Cure = set_combine(sets.precast.FC, {
             neck="Diemer Gorget",
             ear1="Nourish. Earring",
@@ -204,6 +206,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {neck="Fotia Gorget",ear1="Ishvara Earring",ear2="Moonshade Earring"})
         sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {ear1="Mache Earring +1",ear2="Telos Earring"})
         
+        --TODO: Update this set
         sets.precast.WS['Flat Blade'] = {
             ammo="Aurgelmir Orb +1",
             head="Founder's Corona",
@@ -219,7 +222,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Carmine_D_Legs,
             feet="Founder's Greaves"
         }
-    
+        --TODO: Update this set
         sets.precast.WS['Flat Blade'].Acc = {
             ammo="Aurgelmir Orb +1",
             head="Flam. Zucchetto +2",
@@ -235,7 +238,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Flamma Dirs +2",
             feet="Flam. Gambieras +2"
         }
-    
+        --TODO: Update this set
         sets.precast.WS['Sanguine Blade'] = {
             ammo="Dosis Tathlum",
             head="Jumalik Helm",
@@ -253,7 +256,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         }
     
         sets.precast.WS['Sanguine Blade'].Acc = sets.precast.WS['Sanguine Blade']
-    
+        --TODO: Update this set
         sets.precast.WS['Atonement'] = {
             ammo="Sapience Orb",
             head="Loess Barbuta +1",
@@ -291,7 +294,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.midcast['Blue Magic'] = set_combine(sets.Enmity, {})
         sets.midcast['Blue Magic'].SIRD = set_combine(sets.Enmity.SIRD, {})
         sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
-    
+        --TODO: Update this set
         sets.midcast.Cure = {
             ammo="Staunch Tathlum +1",
             head="Loess Barbuta +1",
@@ -307,7 +310,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Carmine_D_Legs,
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update this set
         sets.midcast.Cure.SIRD = {
             ammo="Staunch Tathlum +1",
             head="Souveran Schaller +1",
@@ -323,7 +326,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Founder's Hose",
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update this set
         sets.midcast.Cure.DT = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_D_Head,
@@ -339,7 +342,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Souveran_C_Legs,
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.midcast.Reprisal = {
             ammo="Staunch Tathlum +1",
             head="Loess Barbuta +1",
@@ -355,7 +358,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Arke Cosc. +1",
             feet=gear.Souveran_D_Feet
         }
-    
+        --TODO: Update this set
         sets.Self_Healing = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_C_Head,
@@ -371,7 +374,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Souveran_C_Legs,
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.Self_Healing.SIRD = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_C_Head,
@@ -387,7 +390,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Founder's Hose",
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update this set
         sets.Self_Healing.DT = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_C_Head,
@@ -406,7 +409,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
     
         sets.Cure_Received = {hands=gear.Souveran_C_Hands,feet=gear.Souveran_C_Body}
         sets.Self_Refresh = {waist="Gishdubar Sash"}
-    
+        --TODO: Update this set
         sets.midcast['Enhancing Magic'] = {
             ammo="Staunch Tathlum +1",
             head=gear.Carmine_D_Head,
@@ -422,7 +425,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Carmine_D_Legs,
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update this set
         sets.midcast['Enhancing Magic'].SIRD = {
             ammo="Staunch Tathlum +1",
             head="Souv. Schaller +1",
@@ -438,9 +441,9 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.AF_Legs,
             feet="Odyssean Greaves"
         }
-    
+
         sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
-    
+
         sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
         sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
         
@@ -460,6 +463,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         --------------------------------------
     
         -- Idle sets
+        --TODO: Update this set
         sets.idle = {
             ammo="Homiliary",
             head=gear.Empy_Head,
@@ -475,7 +479,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Carmine_D_Legs,
             feet=gear.Empy_Feet
         }
-            
+        --TODO: Update this set
         sets.idle.PDT = {
             ammo="Staunch Tathlum +1",
             head="Loess Barbuta +1",
@@ -491,7 +495,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Arke Cosc. +1",
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.idle.MDT = {
             ammo="Staunch Tathlum +1",
             head="Jumalik Helm",
@@ -507,7 +511,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Souveran_C_Legs,
             feet="Founder's Greaves"
         }
-            
+        --TODO: Update this set
         sets.idle.Refresh = {
             ammo="Homiliary",
             head="Jumalik Helm",
@@ -523,7 +527,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Souveran_C_Legs,
             feet=gear.Relic_Feet
         }
-    
+        --TODO: Update this set
         sets.idle.Tank = {
             ammo="Staunch Tathlum +1",
             head=gear.Empy_Head,
@@ -539,7 +543,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Empy_Legs,
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.idle.KiteTank = {
             ammo="Staunch Tathlum +1",
             head="Loess Barbuta +1",
@@ -555,7 +559,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Carmine_D_Legs,
             feet="Hippo. Socks +1"
         }
-            
+        --TODO: Update this set
         sets.idle.Weak = {
             ammo="Staunch Tathlum +1",
             head="Twilight Helm",
@@ -653,7 +657,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
         sets.weapons.DualWeapons = {main="Naegling",sub="Demersal Degen +1"}
         sets.weapons.NaeglingAegis = {main="Naegling",sub="Aegis"}
         sets.weapons.NaeglingDuban = {main="Naegling",sub="Duban"}
-        
+        --TODO: Update this set
         sets.defense.PDT = {
             ammo="Staunch Tathlum +1",
             head=gear.Empy_Head,
@@ -669,7 +673,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Souveran_C_Legs,
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.defense.PDT_HP = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_D_Head,
@@ -685,7 +689,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Arke Cosc. +1",
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.defense.MDT_HP = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_D_Head,
@@ -701,7 +705,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Arke Cosc. +1",
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.defense.MEVA_HP = {
             ammo="Staunch Tathlum +1",
             head=gear.Souveran_D_Head,
@@ -717,7 +721,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs="Arke Cosc. +1",
             feet=gear.Souveran_D_Feet
         }
-
+        --TODO: Update this set
         sets.defense.BDT = {
             ammo="Staunch Tathlum +1",
             head="Loess Barbuta +1",
@@ -749,7 +753,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Empy_Legs,
             feet=gear.Souveran_D_Feet
         }
-            
+        --TODO: Update this set
         sets.defense.MEVA = {
             ammo="Staunch Tathlum +1",
             head="Founder's Corona",
@@ -765,7 +769,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.odyssean_fc_legs,
             feet="Hippo. Socks +1"
         }
-            
+        --TODO: Update this set
         sets.defense.Death = {
             ammo="Staunch Tathlum +1",
             head="Founder's Corona",
@@ -781,7 +785,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.odyssean_fc_legs,
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update this set
         sets.defense.Charm = {
             ammo="Staunch Tathlum +1",
             head="Founder's Corona",
@@ -797,7 +801,7 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
             legs=gear.Souveran_C_Legs,
             feet="Odyssean Greaves"
         }
-            
+        --TODO: Update/Remove this set
             -- To cap MDT with Shell IV (52/256), need 76/256 in gear.
         -- Shellra V can provide 75/256, which would need another 53/256 in gear.
         sets.defense.OchainMDT = {
