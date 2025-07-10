@@ -3,26 +3,26 @@ include('Gearsets/'..player.name..'/Globals-AugGear.lua')
     ---------------------------------------- JSE ---------------------------------------------------
     ------------------------------------------------------------------------------------------------
 
-    gear.AF_Head="Reverence Coronet +1"
-    gear.AF_Body="Reverence Surcoat +1"
-    gear.AF_Hands="Reverence Gauntlets +1"
-    gear.AF_Legs="Reverence Breeches +1"
-    gear.AF_Feet="Reverence Leggings +1"
+        gear.AF_Head="Reverence Coronet +1"
+        gear.AF_Body="Reverence Surcoat +1"
+        gear.AF_Hands="Reverence Gauntlets +1"
+        gear.AF_Legs="Reverence Breeches +1"
+        gear.AF_Feet="Reverence Leggings +1"
 
-    gear.Relic_Head="Caballarius Coronet +1"
-    gear.Relic_Body="Caballarius Surcoat +1"
-    gear.Relic_Hands="Caballarius Gauntlets +1"
-    gear.Relic_Legs="Caballarius Breeches +1"
-    gear.Relic_Feet="Caballarius Leggings +1"
+        gear.Relic_Head="Caballarius Coronet +1"
+        gear.Relic_Body="Caballarius Surcoat +1"
+        gear.Relic_Hands="Caballarius Gauntlets +1"
+        gear.Relic_Legs="Caballarius Breeches +1"
+        gear.Relic_Feet="Caballarius Leggings +1"
 
-    gear.Empy_Head="Chevalier's Armet +2"
-    gear.Empy_Body="Chevalier's Cuirass +2"
-    gear.Empy_Hands="Chevalier's Gauntlets +2"
-    gear.Empy_Legs="Chevalier's Cuisses +2"
-    gear.Empy_Feet="Chevalier's Sabatons +2"
+        gear.Empy_Head="Chevalier's Armet +2"
+        gear.Empy_Body="Chevalier's Cuirass +2"
+        gear.Empy_Hands="Chevalier's Gauntlets +2"
+        gear.Empy_Legs="Chevalier's Cuisses +2"
+        gear.Empy_Feet="Chevalier's Sabatons +2"
 
 
-    gear.JSE_Neck="Knight's Bead Necklace +2"
+        gear.JSE_Neck="Knight's Bead Necklace +2"
 ------------------------------------------------------------------------------------------------
         -- Precast sets
 ------------------------------------------------------------------------------------------------
