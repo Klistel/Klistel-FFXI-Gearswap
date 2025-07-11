@@ -60,6 +60,8 @@ function select_default_macro_book()
 end
 
 function user_job_setup()
+    lockstyleset = 3
+	
 
     -- Options: Override default values	
     state.OffenseMode:options('Normal')
@@ -129,6 +131,7 @@ function user_job_setup()
     
     select_default_macro_book()
     update_defense_mode()
+	set_lockstyle()
 end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
@@ -671,3 +674,7 @@ buff_spell_lists = {
 		{Name='Phalanx',Buff='Phalanx',SpellID=106,Reapply=false},
 	},
 }
+
+function set_lockstyle()
+    send_command('wait 5; input /lockstyleset ' .. lockstyleset)
+end

@@ -470,11 +470,12 @@ sets.idle = {
     ear1 = "Creed Earring",
     ear2 = "Foresti Earring",
     body = "Sakpata's Breastplate",
-    hands = gear.Souveran_C_Hands,
+    hands = gear.Empy_Hands,
     ring1 = {name = "Moonlight Ring", bag = "wardrobe3"},
-    ring2 = {name = "Moonlight Ring", bag = "wardrobe5"},
+    ring2 = "Vexer Ring +1",
     back = gear.PLD_Enmity_Cape,
-    waist = "Carrier's Sash",
+    waist = "Creed Baudrier",
+    --waist = "Carrier's Sash",
     legs = gear.Empy_Legs,
     feet = gear.AF_Feet
 }
