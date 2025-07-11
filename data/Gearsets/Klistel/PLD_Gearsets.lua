@@ -122,9 +122,8 @@ sets.precast.Waltz = {
 sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
 -- Fast cast sets for spells
--- TODO: Update this set
 sets.precast.FC = {
-    ammo = "Impatiens",
+    ammo = "Sapience Orb",
     head = gear.Carmine_D_Head,
     neck = "Baetyl Pendant",
     ear1 = "Enchntr. Earring +1",
@@ -134,25 +133,9 @@ sets.precast.FC = {
     ring1 = "Weatherspoon Ring",
     ring2 = "Kishar Ring",
     back = gear.PLD_FC_Cape,
-    waist = "Flume Belt +1",
-    legs = gear.odyssean_fc_legs,
-    feet = "Odyssean Greaves"
-}
--- TODO: Update this set
-sets.precast.FC.DT = {
-    ammo = "Staunch Tathlum +1",
-    head = gear.Souveran_D_Head,
-    neck = "Loricate Torque +1",
-    ear1 = "Odnowa Earring +1",
-    ear2 = "Tuisto Earring",
-    body = gear.AF_Body,
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Gelatinous Ring +1",
-    ring2 = "Moonlight Ring",
-    back = "Moonlight Cape",
-    waist = "Creed Baudrier",
-    legs = gear.Souveran_C_Legs,
-    feet = gear.Souveran_D_Feet
+    --waist = "Flume Belt +1",
+    legs = "Enif Cosciales",
+    feet = gear.Empy_Feet
 }
 
 sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC,
@@ -183,23 +166,6 @@ sets.precast.WS = {
     legs = "Nyame Flanchard",
     feet = "Nyame Sollerets"
 }
-
-sets.precast.WS.DT = sets.precast.WS
--- = {
---     ammo="Staunch Tathlum +1",
---     head=gear.Souveran_D_Head,
---     neck="Loricate Torque +1",
---     ear1="Odnowa Earring +1",
---     ear2="Tuisto Earring",
---     body=gear.AF_Body,
---     hands=gear.Souveran_C_Hands,
---     ring1="Gelatinous Ring +1",
---     ring2="Moonlight Ring",
---     back="Moonlight Cape",
---     waist="Creed Baudrier",
---     legs=gear.Souveran_C_Legs,
---     feet=gear.Souveran_D_Feet
--- }
 
 -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {
@@ -284,6 +250,7 @@ sets.precast.WS['Sanguine Blade'] = {
 }
 
 sets.precast.WS['Sanguine Blade'].Acc = sets.precast.WS['Sanguine Blade']
+
 -- TODO: Update this set
 sets.precast.WS['Atonement'] = {
     ammo = "Sapience Orb",
@@ -298,7 +265,7 @@ sets.precast.WS['Atonement'] = {
     back = gear.PLD_Enmity_Cape,
     waist = "Fotia Belt",
     legs = "Flamma Dirs +2",
-    feet = "Eschite Greaves"
+    feet = {name = gear.Empy_Feet, priority = 42}
 }
 
 sets.precast.WS['Atonement'].Acc = sets.precast.WS['Atonement']
@@ -496,54 +463,22 @@ sets.midcast.Phalanx.DT = set_combine(sets.midcast.Phalanx.SIRD, {})
 --------------------------------------
 
 -- Idle sets
--- TODO: Update this set
 sets.idle = {
-    ammo = "Homiliary",
+    ammo = "Staunch Tathlum +1",
     head = gear.Empy_Head,
-    neck = "Coatl Gorget +1",
-    ear1 = "Eabani Earring",
-    ear2 = "Chevalier's Earring",
-    body = gear.Relic_Body,
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Stikini Ring +1",
-    ring2 = "Defending Ring",
-    back = "Null Shawl",
-    waist = "Platinum Moogle Belt",
-    legs = gear.Carmine_D_Legs,
-    feet = gear.Empy_Feet
-}
--- TODO: Update this set
-sets.idle.PDT = {
-    ammo = "Staunch Tathlum +1",
-    head = "Loess Barbuta +1",
-    neck = "Diemer Gorget",
+    neck = "Combatant's Torque",
     ear1 = "Creed Earring",
-    ear2 = "Thureous Earring",
-    body = "Tartarus Platemail",
+    ear2 = "Foresti Earring",
+    body = "Sakpata's Breastplate",
     hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Moonlight Ring",
-    back = "Shadow Mantle",
-    waist = "Flume Belt +1",
-    legs = "Arke Cosc. +1",
-    feet = gear.Souveran_D_Feet
+    ring1 = {name = "Moonlight Ring", bag = "wardrobe3"},
+    ring2 = {name = "Moonlight Ring", bag = "wardrobe5"},
+    back = gear.PLD_Enmity_Cape,
+    waist = "Carrier's Sash",
+    legs = gear.Empy_Legs,
+    feet = gear.AF_Feet
 }
--- TODO: Update this set
-sets.idle.MDT = {
-    ammo = "Staunch Tathlum +1",
-    head = "Jumalik Helm",
-    neck = "Warder's Charm +1",
-    ear1 = "Etiolation Earring",
-    ear2 = "Sanare Earring",
-    body = "Tartarus Platemail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Shadow Ring",
-    back = gear.PLD_FC_Cape,
-    waist = "Flume Belt +1",
-    legs = gear.Souveran_C_Legs,
-    feet = "Founder's Greaves"
-}
+
 -- TODO: Update this set
 sets.idle.Refresh = {
     ammo = "Homiliary",
@@ -558,54 +493,6 @@ sets.idle.Refresh = {
     back = "Moonlight Cape",
     waist = "Flume Belt +1",
     legs = gear.Souveran_C_Legs,
-    feet = gear.Relic_Feet
-}
--- TODO: Update this set
-sets.idle.Tank = {
-    ammo = "Staunch Tathlum +1",
-    head = gear.Empy_Head,
-    neck = "Loricate Torque +1",
-    ear1 = "Creed Earring",
-    ear2 = "Thureous Earring",
-    body = "Tartarus Platemail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Shadow Ring",
-    back = "Shadow Mantle",
-    waist = "Flume Belt +1",
-    legs = gear.Empy_Legs,
-    feet = gear.Souveran_D_Feet
-}
--- TODO: Update this set
-sets.idle.KiteTank = {
-    ammo = "Staunch Tathlum +1",
-    head = "Loess Barbuta +1",
-    neck = "Loricate Torque +1",
-    ear1 = "Etiolation Earring",
-    ear2 = "Thureous Earring",
-    body = "Tartarus Platemail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Shadow Ring",
-    back = "Shadow Mantle",
-    waist = "Flume Belt +1",
-    legs = gear.Carmine_D_Legs,
-    feet = "Hippo. Socks +1"
-}
--- TODO: Update this set
-sets.idle.Weak = {
-    ammo = "Staunch Tathlum +1",
-    head = "Twilight Helm",
-    neck = "Loricate Torque +1",
-    ear1 = "Etiolation Earring",
-    ear2 = "Thureous Earring",
-    body = "Twilight Mail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Moonlight Ring",
-    back = "Moonlight Cape",
-    waist = "Flume Belt +1",
-    legs = gear.Carmine_D_Legs,
     feet = gear.Relic_Feet
 }
 
@@ -631,7 +518,7 @@ sets.engaged = {
     hands = "Sulev. Gauntlets +2",
     ring1 = "Flamma Ring",
     ring2 = "Petrov Ring",
-    -- back="Bleating Mantle",
+    back=gear.PLD_DD_TP_Cape,
     waist = "Sailfi Belt +1",
     legs = "Sulev. Cuisses +2",
     feet = "Flam. Gambieras +2"
@@ -639,22 +526,7 @@ sets.engaged = {
 
 sets.engaged.DW = sets.engaged
 
-sets.engaged.Tank = {
-    ammo = "Staunch Tathlum +1",
-    head = gear.Empy_Head,
-    -- neck="Loricate Torque +1",
-    neck = "Combatant's Torque",
-    ear1 = "Creed Earring",
-    ear2 = "Chevalier's Earring +1",
-    body = gear.Empy_Body,
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Gelatinous Ring +1",
-    ring2 = "Moonlight Ring",
-    back = gear.PLD_Enmity_Cape,
-    waist = "Creed Baudrier",
-    legs = gear.Empy_Legs,
-    feet = gear.Souveran_D_Feet
-}
+sets.engaged.Tank = sets.idle
 
 sets.engaged.DDTank = {
     ammo = "Aurgelmir Orb +1",
@@ -701,23 +573,8 @@ sets.weapons.NaeglingBlurred = {main = "Naegling", sub = "Blurred Shield +1"}
 sets.weapons.DualWeapons = {main = "Naegling", sub = "Demersal Degen +1"}
 sets.weapons.NaeglingAegis = {main = "Naegling", sub = "Aegis"}
 sets.weapons.NaeglingDuban = {main = "Naegling", sub = "Duban"}
--- TODO: Update this set
-sets.defense.PDT = {
-    ammo = "Staunch Tathlum +1",
-    head = gear.Empy_Head,
-    neck = "Diemer Gorget",
-    ear1 = "Creed Earring",
-    ear2 = "Thureous Earring",
-    body = "Tartarus Platemail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Warden's Ring",
-    back = "Shadow Mantle",
-    waist = "Flume Belt +1",
-    legs = gear.Souveran_C_Legs,
-    feet = gear.Souveran_D_Feet
-}
--- TODO: Update this set
+
+-- Max DT and dump as much HP as I can
 sets.defense.PDT_HP = {
     ammo = "Staunch Tathlum +1",
     head = gear.Souveran_D_Head,
@@ -733,8 +590,11 @@ sets.defense.PDT_HP = {
     legs = "Arke Cosc. +1",
     feet = gear.Souveran_D_Feet
 }
+
+sets.defense.MDT_HP = sets.defense.PDT_HP
+
 -- TODO: Update this set
-sets.defense.MDT_HP = {
+sets.defense.MEVA = {
     ammo = "Staunch Tathlum +1",
     head = gear.Souveran_D_Head,
     neck = "Loricate Torque +1",
@@ -748,55 +608,10 @@ sets.defense.MDT_HP = {
     waist = "Creed Baudrier",
     legs = "Arke Cosc. +1",
     feet = gear.Souveran_D_Feet
-}
--- TODO: Update this set
-sets.defense.MEVA_HP = {
-    ammo = "Staunch Tathlum +1",
-    head = gear.Souveran_D_Head,
-    neck = "Loricate Torque +1",
-    ear1 = "Odnowa Earring +1",
-    ear2 = "Tuisto Earring",
-    body = gear.AF_Body,
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Gelatinous Ring +1",
-    ring2 = "Moonlight Ring",
-    back = "Moonlight Cape",
-    waist = "Creed Baudrier",
-    legs = "Arke Cosc. +1",
-    feet = gear.Souveran_D_Feet
-}
--- TODO: Update this set
-sets.defense.BDT = {
-    ammo = "Staunch Tathlum +1",
-    head = "Loess Barbuta +1",
-    neck = "Warder's Charm +1",
-    ear1 = "Odnowa Earring +1",
-    ear2 = "Sanare Earring",
-    body = "Tartarus Platemail",
-    hands = "Sulev. Gauntlets +2",
-    ring1 = "Defending Ring",
-    ring2 = "Shadow Ring",
-    back = "Moonlight Cape",
-    waist = "Asklepian Belt",
-    legs = "Sulev. Cuisses +2",
-    feet = "Amm Greaves"
 }
 
-sets.defense.Tank = {
-    ammo = "Staunch Tathlum +1",
-    head = gear.Empy_Head,
-    neck = "Loricate Torque +1",
-    ear1 = "Creed Earring",
-    ear2 = "Thureous Earring",
-    body = "Tartarus Platemail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Shadow Ring",
-    back = "Shadow Mantle",
-    waist = "Flume Belt +1",
-    legs = gear.Empy_Legs,
-    feet = gear.Souveran_D_Feet
-}
+sets.defense.Tank = sets.idle
+
 -- TODO: Update this set
 sets.defense.MEVA = {
     ammo = "Staunch Tathlum +1",
@@ -844,24 +659,6 @@ sets.defense.Charm = {
     waist = "Asklepian Belt",
     legs = gear.Souveran_C_Legs,
     feet = "Odyssean Greaves"
-}
--- TODO: Update/Remove this set
--- To cap MDT with Shell IV (52/256), need 76/256 in gear.
--- Shellra V can provide 75/256, which would need another 53/256 in gear.
-sets.defense.OchainMDT = {
-    ammo = "Staunch Tathlum +1",
-    head = "Founder's Corona",
-    neck = "Warder's Charm +1",
-    ear1 = "Odnowa Earring +1",
-    ear2 = "Sanare Earring",
-    body = "Tartarus Platemail",
-    hands = gear.Souveran_C_Hands,
-    ring1 = "Defending Ring",
-    ring2 = "Shadow Ring",
-    back = "Engulfer Cape +1",
-    waist = "Creed Baudrier",
-    legs = gear.Empy_Legs,
-    feet = gear.Empy_Feet
 }
 
 --------------------------------------

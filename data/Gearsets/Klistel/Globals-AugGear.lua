@@ -113,7 +113,7 @@ gear.SMN_FC_Cape = {
 
 gear.PLD_Enmity_Cape = {
     name = "Rudianos's Mantle",
-    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'HP+20', 'Enmity+10'}
+    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Eva.+10', 'Enmity+10', 'Block Chance +5'}
 }
 gear.PLD_DD_TP_Cape = {
     name = "Rudianos's Mantle",
@@ -134,6 +134,8 @@ gear.PLD_FC_Cape = {
         'INT+20', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10'
     }
 }
+
+
 
 ------------------------------------------------------------------------------------------------
 ---------------------------------------- AugGear -----------------------------------------------

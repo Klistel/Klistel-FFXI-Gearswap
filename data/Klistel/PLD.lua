@@ -68,9 +68,9 @@ function user_job_setup()
     state.CastingMode:options('Normal','SIRD')
     state.Passive:options('None','AbsorbMP')
     state.PhysicalDefenseMode:options('Tank','PDT_HP')
-    state.MagicalDefenseMode:options('BDT','MDT_HP')
-    state.ResistDefenseMode:options('MEVA','MEVA_HP','Death','Charm')
-    state.IdleMode:options('Normal','Tank','KiteTank','PDT','MDT','Refresh')
+    state.MagicalDefenseMode:options('Tank','MEVA','MEVA_HP','MDT_HP')
+    state.ResistDefenseMode:options('Death','Charm')
+    state.IdleMode:options('Normal','Refresh')
 
     state.Weapons:options('NaeglingBlurred','DualWeapons','NaeglingAegis','NaeglingDuban')
 
