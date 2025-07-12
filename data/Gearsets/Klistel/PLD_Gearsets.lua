@@ -3,23 +3,23 @@ include('Gearsets/' .. player.name .. '/Globals-AugGear.lua')
 ---------------------------------------- JSE ---------------------------------------------------
 ------------------------------------------------------------------------------------------------
 
-gear.AF_Head = "Reverence Coronet +1"
-gear.AF_Body = "Reverence Surcoat +1"
-gear.AF_Hands = "Reverence Gauntlets +1"
-gear.AF_Legs = "Reverence Breeches +1"
-gear.AF_Feet = "Reverence Leggings +1"
+gear.AF_Head = { name ="Reverence Coronet +1", priority = 41 }
+gear.AF_Body = { name ="Reverence Surcoat +1", priority = 163 }
+gear.AF_Hands = { name ="Reverence Gauntlets +1", priority = 69 }
+gear.AF_Legs = { name ="Reverence Breeches +1", priority = 102 }
+gear.AF_Feet = { name ="Reverence Leggings +1", priority = 48 }
 
-gear.Relic_Head = "Caballarius Coronet +1"
-gear.Relic_Body = "Caballarius Surcoat +1"
-gear.Relic_Hands = "Caballarius Gauntlets +1"
-gear.Relic_Legs = "Caballarius Breeches +1"
-gear.Relic_Feet = "Caballarius Leggings +1"
+gear.Relic_Head = { name ="Caballarius Coronet +1", priority = 96 }
+gear.Relic_Body = { name ="Caballarius Surcoat +1", priority = 118 }
+gear.Relic_Hands = { name ="Caballarius Gauntlets +1", priority = 104 }
+gear.Relic_Legs = { name ="Caballarius Breeches +1", priority = 52 }
+gear.Relic_Feet = { name ="Caballarius Leggings +1", priority = 43 }
 
-gear.Empy_Head = "Chevalier's Armet +2"
-gear.Empy_Body = "Chevalier's Cuirass +2"
-gear.Empy_Hands = "Chevalier's Gauntlets +2"
-gear.Empy_Legs = "Chevalier's Cuisses +2"
-gear.Empy_Feet = "Chevalier's Sabatons +2"
+gear.Empy_Head = { name ="Chevalier's Armet +2", priority = 135 }
+gear.Empy_Body = { name ="Chevalier's Cuirass +2", priority = 141 }
+gear.Empy_Hands = { name ="Chevalier's Gauntlets +2", priority = 54 }
+gear.Empy_Legs = { name ="Chevalier's Cuisses +2", priority = 117 }
+gear.Empy_Feet = { name = "Chevalier's Sabatons +2", priority = 42 }
 
 gear.JSE_Neck = "Knight's Bead Necklace +2"
 ------------------------------------------------------------------------------------------------
@@ -33,14 +33,14 @@ sets.Enmity = {
     neck = {name = "Moonlight Necklace"},
     ear1 = {name = "Friomisi Earring"},
     ear2 = {name = "Cryptic Earring", priority = 40},
-    body = {name = gear.Souveran_C_Body, priority = 181},
+    body = gear.Souveran_C_Body,
     hands = {name = "Macabre Gaunt. +1", priority = 29},
     ring1 = {name = "Apeile Ring +1"},
     ring2 = {name = "Vexer Ring +1"},
-    back = {name = gear.PLD_Enmity_Cape, priority = 60},
+    back = gear.PLD_Enmity_Cape,
     waist = {name = "Creed Baudrier", priority = 40},
-    legs = {name = gear.Souveran_C_Legs, priority = 162},
-    feet = {name = gear.Empy_Feet, priority = 42}
+    legs = gear.Souveran_C_Legs,
+    feet = gear.Empy_Feet
 }
 
 sets.Enmity.SIRD = sets.Enmity
@@ -265,7 +265,7 @@ sets.precast.WS['Atonement'] = {
     back = gear.PLD_Enmity_Cape,
     waist = "Fotia Belt",
     legs = "Flamma Dirs +2",
-    feet = {name = gear.Empy_Feet, priority = 42}
+    feet = gear.Empy_Feet
 }
 
 sets.precast.WS['Atonement'].Acc = sets.precast.WS['Atonement']

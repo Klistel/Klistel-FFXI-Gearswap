@@ -1,6 +1,7 @@
 ------------------------------------------------------------------------------------------------
 ---------------------------------------- Capes -------------------------------------------------
 ------------------------------------------------------------------------------------------------
+
 gear.COR_DW_Cape = {
     name = "Camulus's Mantle",
     augments = {
@@ -113,7 +114,8 @@ gear.SMN_FC_Cape = {
 
 gear.PLD_Enmity_Cape = {
     name = "Rudianos's Mantle",
-    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Eva.+10', 'Enmity+10', 'Block Chance +5'}
+    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Eva.+10', 'Enmity+10', 'Block Chance +5'},
+    priority = 60
 }
 gear.PLD_DD_TP_Cape = {
     name = "Rudianos's Mantle",
@@ -275,25 +277,31 @@ gear.Lustratio_D_Feet = {}
 -- Souveran
 gear.Souveran_C_Head = {
     name = "Souv. Schaller +1",
-    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'}
+    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'},
+    priority = 280
 }
 gear.Souveran_D_Head = {
     name = "Souv. Schaller +1",
-    augments = {'HP+105', 'VIT+12', 'Phys. dmg. taken -4'}
+    augments = {'HP+105', 'VIT+12', 'Phys. dmg. taken -4'},
+    priority = 280
 }
 gear.Souveran_C_Body = {
     name = "Souv. Cuirass +1",
-    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'}
+    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'},
+    priority = 181
 }
 gear.Souveran_C_Hands = {
     name = "Souv. Handsch. +1",
-    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'}
+    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'},
+    priority = 239
 }
 gear.Souveran_C_Legs = {
     name = "Souv. Diechlings +1",
-    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'}
+    augments = {'HP+105', 'Enmity+9', 'Potency of "Cure" effect received +15%'},
+    priority = 162
 }
 gear.Souveran_D_Feet = {
     name = "Souveran Schuhs +1",
-    augments = {'HP+65', 'Attack+25', 'Magic dmg. taken -4'}
+    augments = {'HP+65', 'Attack+25', 'Magic dmg. taken -4'},
+    priority = 187
 }
