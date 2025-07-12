@@ -105,10 +105,11 @@ function user_job_setup()
 	send_command('bind @d gs c cycleback Weapons')
     send_command('bind @f gs c cycle Weapons')
 
-    send_command('bind ^c input /ja "Cover" <stpt>')
-    send_command('bind ^a input /ma "Cure IV" <stal>')
+    send_command('bind ^c input /ja "Cover" <stpc>')
+    send_command('bind ^a input /ma "Cure IV" <stpc>')
 	send_command('bind ^numpad0 input /ja "Shield Bash" <t>')
     send_command('bind ^numpad. input /ja "Sentinel" <me>')
+	send_command('bind !numpad. input /ja "Rampart" <me>')
     send_command('bind ^numpad+ input /ja "Chivalry" <me>')
     send_command('bind ^numpadenter input /ja "Palisade" <me>')
     send_command('bind ^numlock input  /ma "Flash" <stnpc>')
@@ -128,6 +129,13 @@ function user_job_setup()
         send_command('bind ^numpad* input /ja "Box Step" <t>')
         send_command('bind ^numpad- input /ja "Spectral Jig" <me>')
     end
+
+
+	send_command('bind ^numpad7 input /ws "Savage Blade" <t>')
+    send_command('bind ^numpad8 input /ws "Atonement" <t>')
+    send_command('bind ^numpad4 input /ws "Sanguine Blade" <t>')
+    send_command('bind ^numpad5 input /ws "Seraph Blade" <t>')
+
     
     select_default_macro_book()
     update_defense_mode()
