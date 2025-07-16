@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Blurred Shield +1",
+    ammo="Staunch Tathlum +1",
+    head="Chev. Armet +2",
+    body="Sakpata's Plate",
+    hands="Chev. Gauntlets +2",
+    legs="Chev. Cuisses +2",
+    feet="Rev. Leggings +1",
+    neck="Combatant's Torque",
+    waist="Creed Baudrier",
+    left_ear="Cessance Earring",
+    right_ear="Foresti Earring",
+    left_ring="Moonlight Ring",
+    right_ring="Vexer Ring +1",
+    back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+19 Attack+19','Weapon skill damage +10%',}},
+}

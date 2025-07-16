@@ -104,6 +104,7 @@ function get_sets()
 end
 -- Called when this job file is unloaded (eg: job change)
 function file_unload()
+	send_command('unbind ^a')
 	clear_binds()
 end
 

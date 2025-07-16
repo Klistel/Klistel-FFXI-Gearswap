@@ -105,8 +105,10 @@ function user_job_setup()
 	send_command('bind @d gs c cycleback Weapons')
     send_command('bind @f gs c cycle Weapons')
 
-    send_command('bind ^c input /ja "Cover" <stpc>')
-    send_command('bind ^a input /ma "Cure IV" <stpc>')
+	send_command('bind ^c input /ma "Crusade" <me>')
+    send_command('bind !c input /ja "Cover" <stpc>')
+    send_command('bind !a input /ma "Cure IV" <stpc>')
+	send_command('bind ^a input /ma "Phalanx" <me>')
 	send_command('bind ^numpad0 input /ja "Shield Bash" <t>')
     send_command('bind ^numpad. input /ja "Sentinel" <me>')
 	send_command('bind !numpad. input /ja "Rampart" <me>')
@@ -117,10 +119,10 @@ function user_job_setup()
 
 	if player.sub_job == 'WAR' then
         send_command('bind ^numpad/ input /ja "Berserk" <me>')
-        send_command('bind ^numpad* input /ja "Warcry" <me>')
+        send_command('bind !numpad* input /ja "Warcry" <me>')
+		send_command('bind ^numpad* input /ja "Provoke" <t>')
         send_command('bind ^numpad- input /ja "Aggressor" <me>')
 		send_command('bind !numpad/ input /ja "Defender" <me>')
-		send_command('bind !numpad* input /ja "Provoke" <t>')
     elseif player.sub_job == 'NIN' then
         send_command('bind ^numpad/ input /ma "Utsusemi: Ni" <me>')
         send_command('bind ^numpad* input /ma "Utsusemi: Ichi" <me>')
@@ -128,6 +130,12 @@ function user_job_setup()
         send_command('bind ^numpad/ input /ja "Haste Samba" <me>')
         send_command('bind ^numpad* input /ja "Box Step" <t>')
         send_command('bind ^numpad- input /ja "Spectral Jig" <me>')
+	elseif player.sub_job == 'BLU' then
+        send_command('bind ^numpad/ input /ma "Cocoon" <me>')
+        send_command('bind !numpad* input /ma "Blank Gaze "<t>')
+		send_command('bind ^numpad* input /ma "Stinking Gas" <t>')
+        send_command('bind ^numpad- input /ma "Geist Wall" <t>')
+		send_command('bind !numpad/ input /ma "Soporific" <t>')
     end
 
 

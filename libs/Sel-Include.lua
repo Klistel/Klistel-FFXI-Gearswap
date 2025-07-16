@@ -629,6 +629,25 @@ function global_unload()
 	send_command('unbind ^delete')
 	send_command('unbind !delete')
 	send_command('unbind @delete')
+
+	send_command('unbind ^numlock')
+    send_command('unbind ^numpad/')
+	
+    send_command('unbind ^numpad*')
+	send_command('unbind ^numpad.')
+	send_command('unbind !numpad.')
+	send_command('unbind ^numpadenter')
+    send_command('unbind ^numpad-')
+    send_command('unbind ^numpad8')
+    send_command('unbind ^numpad4')
+    send_command('unbind ^numpad5')
+    send_command('unbind ^numpad6')
+    send_command('unbind ^numpad1')
+    send_command('unbind ^numpad2')
+    send_command('unbind ^numpad3')
+    send_command('unbind numpad0')
+
+
 	
 	if clear_job_states then
 		clear_job_states()

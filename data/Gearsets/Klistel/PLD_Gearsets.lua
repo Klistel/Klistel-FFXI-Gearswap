@@ -3,23 +3,23 @@ include('Gearsets/' .. player.name .. '/Globals-AugGear.lua')
 ---------------------------------------- JSE ---------------------------------------------------
 ------------------------------------------------------------------------------------------------
 
-gear.AF_Head = { name ="Reverence Coronet +1", priority = 41 }
-gear.AF_Body = { name ="Reverence Surcoat +1", priority = 163 }
-gear.AF_Hands = { name ="Reverence Gauntlets +1", priority = 69 }
-gear.AF_Legs = { name ="Reverence Breeches +1", priority = 102 }
-gear.AF_Feet = { name ="Reverence Leggings +1", priority = 48 }
+gear.AF_Head = {name = "Reverence Coronet +1", priority = 41}
+gear.AF_Body = {name = "Reverence Surcoat +1", priority = 163}
+gear.AF_Hands = {name = "Reverence Gauntlets +1", priority = 69}
+gear.AF_Legs = {name = "Reverence Breeches +1", priority = 102}
+gear.AF_Feet = {name = "Reverence Leggings +1", priority = 48}
 
-gear.Relic_Head = { name ="Caballarius Coronet +1", priority = 96 }
-gear.Relic_Body = { name ="Caballarius Surcoat +1", priority = 118 }
-gear.Relic_Hands = { name ="Caballarius Gauntlets +1", priority = 104 }
-gear.Relic_Legs = { name ="Caballarius Breeches +1", priority = 52 }
-gear.Relic_Feet = { name ="Caballarius Leggings +1", priority = 43 }
+gear.Relic_Head = {name = "Caballarius Coronet +1", priority = 96}
+gear.Relic_Body = {name = "Caballarius Surcoat +1", priority = 118}
+gear.Relic_Hands = {name = "Caballarius Gauntlets +3", priority = 104}
+gear.Relic_Legs = {name = "Caballarius Breeches +1", priority = 52}
+gear.Relic_Feet = {name = "Caballarius Leggings +1", priority = 43}
 
-gear.Empy_Head = { name ="Chevalier's Armet +2", priority = 135 }
-gear.Empy_Body = { name ="Chevalier's Cuirass +2", priority = 141 }
-gear.Empy_Hands = { name ="Chevalier's Gauntlets +2", priority = 54 }
-gear.Empy_Legs = { name ="Chevalier's Cuisses +2", priority = 117 }
-gear.Empy_Feet = { name = "Chevalier's Sabatons +2", priority = 42 }
+gear.Empy_Head = {name = "Chevalier's Armet +2", priority = 135}
+gear.Empy_Body = {name = "Chevalier's Cuirass +2", priority = 141}
+gear.Empy_Hands = {name = "Chevalier's Gauntlets +2", priority = 54}
+gear.Empy_Legs = {name = "Chevalier's Cuisses +2", priority = 117}
+gear.Empy_Feet = {name = "Chevalier's Sabatons +2", priority = 42}
 
 gear.JSE_Neck = "Knight's Bead Necklace +2"
 ------------------------------------------------------------------------------------------------
@@ -55,7 +55,10 @@ sets.precast.JA['Rampart'] = set_combine(sets.Enmity, {}) -- head="Valor Coronet
 sets.precast.JA['Fealty'] = set_combine(sets.Enmity, {body = gear.Relic_Body})
 sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,
                                                {feet = gear.Empy_Feet})
-sets.precast.JA['Cover'] = set_combine(sets.Enmity, {body = gear.Relic_Body}) -- head="Rev. Coronet +1",
+sets.precast.JA['Cover'] = set_combine(sets.Enmity, {
+    head = gear.AF_Head,
+    body = gear.Relic_Body
+})
 
 sets.precast.JA['Invincible'].DT = set_combine(sets.Enmity.DT,
                                                {legs = gear.Relic_Legs})
@@ -68,8 +71,10 @@ sets.precast.JA['Fealty'].DT = set_combine(sets.Enmity.DT,
                                            {body = gear.Relic_Body})
 sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,
                                                   {feet = gear.Empy_Feet})
-sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT,
-                                          {body = gear.Relic_Body}) -- head="Rev. Coronet +1",
+sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {
+    head = gear.AF_Head,
+    body = gear.Relic_Body
+}) 
 
 -- add mnd for Chivalry
 -- TODO: Update this set
@@ -133,7 +138,7 @@ sets.precast.FC = {
     ring1 = "Weatherspoon Ring",
     ring2 = "Kishar Ring",
     back = gear.PLD_FC_Cape,
-    --waist = "Flume Belt +1",
+    -- waist = "Flume Belt +1",
     legs = "Enif Cosciales",
     feet = gear.Empy_Feet
 }
@@ -161,8 +166,8 @@ sets.precast.WS = {
     hands = "Nyame Gauntlets",
     ring1 = "Epaminondas's Ring",
     ring2 = "Cornelia's Ring",
-    back = "Bleating Mantle",
-    waist = "Fotia Belt",
+    back = gear.PLD_WSD_Cape,
+    waist = "Sailfi Belt +1",
     legs = "Nyame Flanchard",
     feet = "Nyame Sollerets"
 }
@@ -367,7 +372,7 @@ sets.Self_Healing = {
     legs = gear.Souveran_C_Legs,
     feet = gear.Souveran_D_Feet
 }
--- TODO: Update this set
+-- TODO: Update this setS
 sets.Self_Healing.SIRD = {
     ammo = "Staunch Tathlum +1",
     head = gear.Souveran_C_Head,
@@ -379,7 +384,7 @@ sets.Self_Healing.SIRD = {
     ring1 = "Defending Ring",
     ring2 = "Moonlight Ring",
     back = "Solemnity Cape",
-    waist = "Flume Belt +1",
+    waist = "Null Belt",
     legs = "Founder's Hose",
     feet = "Odyssean Greaves"
 }
@@ -409,7 +414,7 @@ sets.Self_Refresh = {waist = "Gishdubar Sash"}
 sets.midcast['Enhancing Magic'] = {
     ammo = "Staunch Tathlum +1",
     head = gear.Carmine_D_Head,
-    neck = "Incanter's Torque",
+    neck = "Melic Torque",
     ear1 = "Andoaa Earring",
     ear2 = "Mimir Earring",
     body = "Shab. Cuirass +1",
@@ -425,11 +430,12 @@ sets.midcast['Enhancing Magic'] = {
 sets.midcast['Enhancing Magic'].SIRD = {
     ammo = "Staunch Tathlum +1",
     head = "Souv. Schaller +1",
-    neck = "Incanter's Torque",
+    neck = "Melic Torque",
     ear1 = "Andoaa Earring",
     ear2 = "Tuisto Earring",
     body = "Shab. Cuirass +1",
     hands = gear.Souveran_C_Hands,
+    -- hands = "Regal Gauntlets",
     ring1 = "Defending Ring",
     ring2 = "Moonlight Ring",
     back = "Merciful Cape",
@@ -475,7 +481,7 @@ sets.idle = {
     ring2 = "Vexer Ring +1",
     back = gear.PLD_Enmity_Cape,
     waist = "Creed Baudrier",
-    --waist = "Carrier's Sash",
+    -- waist = "Carrier's Sash",
     legs = gear.Empy_Legs,
     feet = gear.AF_Feet
 }
@@ -519,7 +525,7 @@ sets.engaged = {
     hands = "Sulev. Gauntlets +2",
     ring1 = "Flamma Ring",
     ring2 = "Petrov Ring",
-    back=gear.PLD_DD_TP_Cape,
+    back = gear.PLD_DD_TP_Cape,
     waist = "Sailfi Belt +1",
     legs = "Sulev. Cuisses +2",
     feet = "Flam. Gambieras +2"
@@ -540,7 +546,8 @@ sets.engaged.DDTank = {
     hands = "Sulev. Gauntlets +2",
     ring1 = {name = "Moonlight Ring", bag = "wardrobe3"},
     ring2 = {name = "Moonlight Ring", bag = "wardrobe5"},
-    back = gear.PLD_DD_TP_Cape,
+    -- back = gear.PLD_DD_TP_Cape,
+    back = gear.PLD_Enmity_Cape,
     waist = "Sailfi Belt +1",
     legs = "Sulev. Cuisses +2",
     feet = "Sulev. Leggings +2"

@@ -392,7 +392,7 @@ sets.engaged.Hybrid = {
     feet = 'Flam. Gambieras +2',
     ring1 = {name = "Chirich Ring +1", bag = "wardrobe2"},
     ring2 = "Niqmaddu Ring",
-    back = gear.DRG_TP_Cape,
+    back = gear.DRG_Haste_Cape,
     waist = 'Ioskeha Belt +1'
 }
 

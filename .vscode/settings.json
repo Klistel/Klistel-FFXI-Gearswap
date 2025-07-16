@@ -1,5 +1,9 @@
 {
     "Lua.diagnostics.globals": [
-        "sets"
+        "sets",
+        "gear"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-global"
     ]
 }
