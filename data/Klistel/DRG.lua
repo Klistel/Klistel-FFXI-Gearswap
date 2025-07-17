@@ -88,14 +88,14 @@ function user_setup()
         send_command('bind ^numpad- input /ja "Third Eye" <me>')
     end
 
-    send_command('bind ^numpad7 input /ws "Camlann\'s Torment" <t>')
+    send_command('bind ^numpad7 input /ws "Savage Blade" <t>')
     send_command('bind ^numpad8 input /ws "Drakesbane" <t>')
     send_command('bind ^numpad4 input /ws "Stardiver" <t>')
     send_command('bind ^numpad5 input /ws "Geirskogul" <t>')
     send_command('bind ^numpad6 input /ws "Impulse Drive" <t>')
     send_command('bind ^numpad1 input /ws "Sonic Thrust" <t>')
     send_command('bind ^numpad2 input /ws "Leg Sweep" <t>')
-    send_command('bind ^numpad3 input /ws "Savage Blade" <t>')
+    send_command('bind ^numpad3 input /ws "Camlann\'s Torment" <t>')
 
     send_command('bind ^numpad0 input /ja "Jump" <t>')
     send_command('bind ^numpad. input /ja "High Jump" <t>')

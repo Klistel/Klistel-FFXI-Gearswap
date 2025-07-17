@@ -79,19 +79,18 @@ gear.DRG_WS_STR_DA_Cape = {
 
 gear.DRG_WS_DEX_WSD = {
     name = "Brigantia's Mantle",
-    augments = {'DEX+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}
-} -- not done 'DEX+10' Dye
+    augments = {'DEX+20', 'Accuracy+20 Attack+20','DEX+10', 'Weapon skill damage +10%'}
+} -- *
 gear.DRG_WS_STR_CRIT = {
     name = "Brigantia's Mantle",
-    augments = {'STR+20', 'Accuracy+20 Attack+20', 'Crit.hit rate+10'}
-} -- not done 'STR+10' Dye
+    augments = {'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Crit.hit rate+10'}
+} -- *
 gear.DRG_Haste_Cape = {
     name = "Brigantia's Mantle",
     augments = {
-        'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Haste +10',
-        'Damage taken-5%'
+        'DEX+20', 'Accuracy+20 Attack+20', 'Haste +10',
     }
-} -- not done
+} -- not done DEX+10 Dye
 
 gear.SMN_PhysCape = {
     name = "Campestres's Cape",
@@ -114,28 +113,28 @@ gear.SMN_FC_Cape = {
 
 gear.PLD_Enmity_Cape = {
     name = "Rudianos's Mantle",
-    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Eva.+10', 'Enmity+10', 'Block Chance +5'},
+    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Enmity+10', 'Chance of successful block +5'},
     priority = 60
-}
+} -- Not Done 'Mag. Eva +10' Dye and more resin
 gear.PLD_DD_TP_Cape = {
     name = "Rudianos's Mantle",
     augments = {
         'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', '"Dbl.Atk."+10',
         'Damage taken-5%'
     }
-}
+} -- not done
 gear.PLD_WSD_Cape = {
     name = "Rudianos's Mantle",
     augments = {
-        'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%'
+        'STR+20', 'Accuracy+19 Attack+19', 'Weapon skill damage +10%'
     }
-}
+} -- lol I fucked up
 gear.PLD_FC_Cape = {
     name = "Rudianos's Mantle",
     augments = {
         'INT+20', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10'
     }
-}
+} -- not done
 
 
 
