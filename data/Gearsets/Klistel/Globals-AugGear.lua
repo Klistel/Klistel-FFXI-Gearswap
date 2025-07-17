@@ -1,7 +1,6 @@
 ------------------------------------------------------------------------------------------------
 ---------------------------------------- Capes -------------------------------------------------
 ------------------------------------------------------------------------------------------------
-
 gear.COR_DW_Cape = {
     name = "Camulus's Mantle",
     augments = {
@@ -79,7 +78,9 @@ gear.DRG_WS_STR_DA_Cape = {
 
 gear.DRG_WS_DEX_WSD = {
     name = "Brigantia's Mantle",
-    augments = {'DEX+20', 'Accuracy+20 Attack+20','DEX+10', 'Weapon skill damage +10%'}
+    augments = {
+        'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%'
+    }
 } -- *
 gear.DRG_WS_STR_CRIT = {
     name = "Brigantia's Mantle",
@@ -87,9 +88,7 @@ gear.DRG_WS_STR_CRIT = {
 } -- *
 gear.DRG_Haste_Cape = {
     name = "Brigantia's Mantle",
-    augments = {
-        'DEX+20', 'Accuracy+20 Attack+20', 'Haste +10',
-    }
+    augments = {'DEX+20', 'Accuracy+20 Attack+20', 'Haste +10'}
 } -- not done DEX+10 Dye
 
 gear.SMN_PhysCape = {
@@ -113,7 +112,10 @@ gear.SMN_FC_Cape = {
 
 gear.PLD_Enmity_Cape = {
     name = "Rudianos's Mantle",
-    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Enmity+10', 'Chance of successful block +5'},
+    augments = {
+        'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Enmity+10',
+        'Chance of successful block +5'
+    },
     priority = 60
 } -- Not Done 'Mag. Eva +10' Dye and more resin
 gear.PLD_DD_TP_Cape = {
@@ -125,9 +127,7 @@ gear.PLD_DD_TP_Cape = {
 } -- not done
 gear.PLD_WSD_Cape = {
     name = "Rudianos's Mantle",
-    augments = {
-        'STR+20', 'Accuracy+19 Attack+19', 'Weapon skill damage +10%'
-    }
+    augments = {'STR+20', 'Accuracy+19 Attack+19', 'Weapon skill damage +10%'}
 } -- lol I fucked up
 gear.PLD_FC_Cape = {
     name = "Rudianos's Mantle",
@@ -135,8 +135,6 @@ gear.PLD_FC_Cape = {
         'INT+20', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10'
     }
 } -- not done
-
-
 
 ------------------------------------------------------------------------------------------------
 ---------------------------------------- AugGear -----------------------------------------------
