@@ -259,7 +259,7 @@ function precast(spell,arg)
 				end
 			end
 	-- Magic
-		elseif spell.type:endswith('Magic') then
+		elseif spell.type:endswith('Magic') or spell.type == 'Trust' then
 			equip(sets.precast.Fastcast)
 			if spell.skill == 'Healing Magic' then
 				equip(sets.precast.Fastcast,sets.precast.Cure)
