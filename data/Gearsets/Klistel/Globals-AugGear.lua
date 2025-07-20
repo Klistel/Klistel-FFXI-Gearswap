@@ -128,7 +128,7 @@ gear.PLD_DD_TP_Cape = {
 gear.PLD_WSD_Cape = {
     name = "Rudianos's Mantle",
     augments = {'STR+20', 'Accuracy+19 Attack+19', 'Weapon skill damage +10%'}
-} -- lol I fucked up
+} -- lol I fucked up. Also needs +10 STR Dye
 gear.PLD_FC_Cape = {
     name = "Rudianos's Mantle",
     augments = {
@@ -139,8 +139,8 @@ gear.PLD_FC_Cape = {
 gear.PLD_DT_Cape = {
     name = "Rudianos's Mantle",
     augments = {
-       'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', 'Enmity+10',
-       'Damage taken-5%'
+        'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', 'Enmity+10',
+        'Damage taken-5%'
     }
 } -- not done
 
@@ -266,7 +266,11 @@ gear.Carmine_D_Feet = {
 }
 
 -- Eschite
-gear.Eschite_A_Feet = {}
+gear.Eschite_A_Feet = {
+    name = "Eschite Greaves",
+    augments = {'HP+80', 'Enmity+7', 'Phys. dmg. taken -4'},
+    priority = 98
+}
 
 -- Lustratio
 gear.Lustratio_A_Head = {
