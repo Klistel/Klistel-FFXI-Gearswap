@@ -22,7 +22,7 @@ gear.AF_Legs = "Laksamana's Trews +2"
 gear.AF_Feet = "Laksamana's Bottes +2"
 
 gear.Relic_Head = "Lanun Tricorne +3"
-gear.Relic_Body = "Lanun Frac +3"
+gear.Relic_Body = "Lanun Frac +4"
 gear.Relic_Hands = "Lanun Gants +3"
 gear.Relic_Legs = "Lanun Trews +3"
 gear.Relic_Feet = "Lanun Bottes +4"
@@ -153,7 +153,8 @@ sets.precast.WS['Last Stand'] = sets.precast.WS
 
 sets.precast.WS['Wildfire'] = {
     ammo = gear.MAbullet,
-    head = "Nyame Helm",
+    --head = "Nyame Helm",
+    head = gear.Herc_MAB_head,
     body = gear.Relic_Body,
     hands = gear.Empy_Hands,
     legs = "Nyame Flanchard",
@@ -242,14 +243,14 @@ sets.midcast.Utsusemi = sets.midcast.SpellInterrupt
 
 sets.midcast.CorsairShot = {
     ammo = gear.QDbullet,
-    --    head=gear.Herc_MAB_head,
-    head = "Malignance Chapeau",
+    head = gear.Herc_MAB_head,
     body = gear.Relic_Body,
     hands = gear.Carmine_D_Hands,
     legs = "Nyame Flanchard",
     feet = gear.Empy_Feet,
     neck = "Baetyl Pendant",
     --    ear1="Crematio Earring",
+    ear1 = "Hecate's Earring",
     ear2 = "Friomisi Earring",
     ring1 = "Dingir Ring",
     ring2 = "Fenrir Ring +1",

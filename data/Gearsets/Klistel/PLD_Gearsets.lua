@@ -11,7 +11,7 @@ function user_job_setup()
     state.ResistDefenseMode:options('MEVA_HP', 'MEVA')
     state.IdleMode:options('Tank', 'Kiting', 'PDT', 'Block', 'MDT')
     state.Weapons:options('None', 'SakpataAegis', 'SakpataDuban',
-                          'NaeglingBlurred', 'ClubDuban', 'MalignanceAegis')
+                          'NaeglingBlurred', 'ClubDuban', 'MalignanceAegis', 'ExcalAegis', 'ExcalDuban')
 
     state.ExtraDefenseMode = M {
         ['description'] = 'Extra Defense Mode',
@@ -73,6 +73,7 @@ function user_job_setup()
     send_command('bind ^q gs c set IdleMode Kiting')
     send_command('bind !q gs c set IdleMode PDT')
     send_command('bind @f8 gs c toggle AutoTankMode')
+    send_command('bind @f5 gs c toggle AutoBuffMode')
     send_command('bind @f10 gs c toggle TankAutoDefense')
     send_command('bind ^@!` gs c cycle SkillchainMode')
 
@@ -89,7 +90,9 @@ function user_job_setup()
     send_command('bind !numpad. input /ja "Rampart" <me>')
     send_command('bind ^numpad+ input /ja "Chivalry" <me>')
     send_command('bind ^numpadenter input /ja "Palisade" <me>')
+    send_command('bind !numpadenter input /ja "Fealty" <me>')
     send_command('bind ^numlock input /ma "Flash" <stnpc>')
+    send_command('bind !numpad7 input /ma "Banishga" <stnpc>')
 
     if player.sub_job == 'WAR' then
         send_command('bind ^numpad/ input /ja "Berserk" <me>')
@@ -114,6 +117,7 @@ function user_job_setup()
 
     send_command('bind ^numpad7 input /ws "Savage Blade" <t>')
     send_command('bind ^numpad8 input /ws "Atonement" <t>')
+    send_command('bind ^numpad9 input /ws "Knights of Round" <t>')
     send_command('bind ^numpad4 input /ws "Sanguine Blade" <t>')
     send_command('bind ^numpad5 input /ws "Seraph Blade" <t>')
     send_command('bind ^numpad1 input /ws "Black Halo" <t>')
@@ -130,10 +134,10 @@ function init_gear_sets()
     ------------------------------------------------------------------------------------------------
 
     gear.AF_Head = {name = "Reverence Coronet +1", priority = 41}
-    gear.AF_Body = {name = "Reverence Surcoat +1", priority = 163}
+    gear.AF_Body = {name = "Reverence Surcoat +2", priority = 244}
     gear.AF_Hands = {name = "Reverence Gauntlets +1", priority = 69}
     gear.AF_Legs = {name = "Reverence Breeches +1", priority = 102}
-    gear.AF_Feet = {name = "Reverence Leggings +1", priority = 48}
+    gear.AF_Feet = {name = "Reverence Leggings +2", priority = 72}
 
     gear.Relic_Head = {name = "Caballarius Coronet +1", priority = 96}
     gear.Relic_Body = {name = "Caballarius Surcoat +1", priority = 118}
@@ -154,53 +158,53 @@ function init_gear_sets()
     --------------------------------------
 
     sets.Enmity = {
-        main = "Sakpata's Sword",
-        sub = "Duban",
-        ammo = "Paeapua",
-        head = "Loess Barbuta +1",
-        neck = "Moonlight Necklace",
-        ear1 = "Friomisi Earring",
-        ear2 = "Trux Earring",
+        main = {name = "Sakpata's Sword", priority = 100},
+        sub = {name = "Duban", priority = 0},
+        ammo = {name = "Paeapua", priority = 0},
+        head = {name = "Loess Barbuta +1", priority = 105},
+        neck = {name = "Moonlight Necklace", priority = 0},
+        ear1 = {name = "Friomisi Earring", priority = 0},
+        ear2 = {name = "Trux Earring", priority = 0},
         body = gear.Souveran_C_Body,
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Apeile Ring +1",
-        ring2 = "Apeile Ring",
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Apeile Ring +1", priority = 0},
+        ring2 = {name = "Apeile Ring", priority = 0},
         back = gear.PLD_Enmity_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Eschite_A_Feet
     }
 
     sets.Enmity.SIRD = {
-        main = "Sakpata's Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Moonlight Necklace",
-        ear1 = "Trux Earring",
-        ear2 = "Magnetic Earring",
+        main = {name = "Sakpata's Sword", priority = 100},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Loess Barbuta +1", priority = 105},
+        neck = {name = "Moonlight Necklace", priority = 0},
+        ear1 = {name = "Trux Earring", priority = 0},
+        ear2 = {name = "Magnetic Earring", priority = 0},
         body = gear.Souveran_C_Body,
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Apeile Ring +1",
-        ring2 = "Moonlight Ring",
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Apeile Ring +1", priority = 0},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_Enmity_Cape,
-        waist = "Rumination Sash",
-        legs = "Founder's Hose",
-        feet = "Odyssean Greaves"
+        waist = {name = "Rumination Sash", priority = 0},
+        legs = {name = "Founder's Hose", priority = 54},
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.Enmity.DT = {
-        ammo = "Staunch Tathlum +1",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
@@ -236,34 +240,34 @@ function init_gear_sets()
 
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {
-        ammo = "Paeapua",
-        head = "Nyame Helm",
-        neck = "Unmoving Collar +1",
-        ear1 = "Nourish. Earring",
-        ear2 = "Nourish. Earring +1",
+        ammo = {name = "Paeapua", priority = 0},
+        head = {name = "Nyame Helm", priority = 91},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Nourish. Earring", priority = 0},
+        ear2 = {name = "Nourish. Earring +1", priority = 0},
         body = gear.AF_Body,
         hands = gear.Relic_Hands,
-        ring1 = "Stikini Ring +1",
-        ring2 = "Rufescent Ring",
+        ring1 = {name = "Stikini Ring +1", priority = 0},
+        ring2 = {name = "Rufescent Ring", priority = 0},
         back = gear.PLD_Enmity_Cape,
-        waist = "Luminary Sash",
-        legs = "Nyame Flanchard",
+        waist = {name = "Luminary Sash", priority = 0},
+        legs = {name = "Nyame Flanchard", priority = 114},
         feet = gear.Carmine_D_Feet
     }
 
     sets.precast.JA['Chivalry'].DT = {
-        ammo = "Paeapua",
-        head = "Nyame Helm",
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        ammo = {name = "Paeapua", priority = 0},
+        head = {name = "Nyame Helm", priority = 91},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Relic_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Luminary Sash",
-        legs = "Nyame Flanchard",
+        waist = {name = "Luminary Sash", priority = 0},
+        legs = {name = "Nyame Flanchard", priority = 114},
         feet = gear.Carmine_D_Feet
     }
 
@@ -289,19 +293,19 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Nyame Helm",
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        ammo = {name = "Aurgelmir Orb +1", priority = 0},
+        head = {name = "Nyame Helm", priority = 91},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
-        hands = "Regal Gauntlets",
-        ring1 = "Asklepian Ring",
-        ring2 = "Valseur's Ring",
+        hands = {name = "Regal Gauntlets", priority = 205},
+        ring1 = {name = "Asklepian Ring", priority = 0},
+        ring2 = {name = "Valseur's Ring", priority = 0},
         back = gear.PLD_DT_Cape,
-        waist = "Chaac Belt",
-        legs = "Nyame Flanchard",
-        feet = "Nyame Sollerets"
+        waist = {name = "Chaac Belt", priority = 0},
+        legs = {name = "Nyame Flanchard", priority = 114},
+        feet = {name = "Nyame Sollerets", priority = 68}
     }
 
     -- Don't need any special gear for Healing Waltz.
@@ -312,212 +316,213 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-        main = "Sakpata's Sword",
-        sub = "Chanter's Shield",
-        ammo = "Sapience Orb",
+        main = {name = "Sakpata's Sword", priority = 100},
+        sub = {name = "Chanter's Shield", priority = 22},
+        ammo = {name = "Sapience Orb", priority = 0},
         -- ammo = "Impatiens",
         head = gear.Carmine_D_Head,
-        neck = "Baetyl Pendant",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Loquac. Earring",
+        neck = {name = "Baetyl Pendant", priority = 0},
+        ear1 = {name = "Enchntr. Earring +1", priority = 0},
+        ear2 = {name = "Loquac. Earring", priority = 0},
         body = gear.AF_Body,
-        hands = "Leyline Gloves",
-        ring1 = "Weatherspoon Ring",
-        ring2 = "Kishar Ring",
+        hands = {name = "Leyline Gloves", priority = 25},
+        ring1 = {name = "Weatherspoon Ring", priority = 0},
+        ring2 = {name = "Kishar Ring", priority = 0},
         back = gear.PLD_FC_Cape,
-        waist = "Creed Baudrier",
-        legs = "Enif Cosciales",
-        -- feet = "Odyssean Greaves"
+        --waist = {name = "Creed Baudrier", priority = 40},
+        waist = {name = "Platinum Moogle Belt", priority = 300},
+        legs = {name = "Enif Cosciales", priority = 40},
+        -- feet = {name = "Odyssean Greaves", priority = 20}
         feet = gear.Empy_Feet
     }
 
     sets.precast.FC.DT = {
-        main = "Sakpata's Sword",
-        ammo = "Sapience Orb",
+        main = {name = "Sakpata's Sword", priority = 100},
+        ammo = {name = "Sapience Orb", priority = 0},
         -- ammo = "Impatiens",
         head = gear.Souveran_C_Head,
-        neck = "Baetyl Pendant",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Baetyl Pendant", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
 
     sets.precast.FC['Enhancing Magic'] =
-        set_combine(sets.precast.FC, {waist = "Siegel Sash"})
+        set_combine(sets.precast.FC, {waist = {name = "Siegel Sash", priority = 0}})
     sets.precast.FC['Enhancing Magic'].DT =
-        set_combine(sets.precast.FC.DT, {waist = "Siegel Sash"})
+        set_combine(sets.precast.FC.DT, {waist = {name = "Siegel Sash", priority = 0}})
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
-        neck = "Diemer Gorget",
-        ear1 = "Nourish. Earring",
-        ear2 = "Nourish. Earring +1",
-        body = "Jumalik Mail"
+        neck = {name = "Diemer Gorget", priority = 0},
+        ear1 = {name = "Nourish. Earring", priority = 0},
+        ear2 = {name = "Nourish. Earring +1", priority = 0},
+        --body = {name = "Jumalik Mail", priority = 116}
     })
 
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Fotia Gorget",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
-        ring1 = "Epaminondas's Ring",
-        ring2 = "Cornelia's Ring",
+        ammo = {name = "Aurgelmir Orb +1", priority = 0},
+        head = {name = "Flam. Zucchetto +2", priority = 80},
+        neck = {name = "Fotia Gorget", priority = 0},
+        ear1 = {name = "Cessance Earring", priority = 0},
+        ear2 = {name = "Brutal Earring", priority = 0},
+        body = {name = "Nyame Mail", priority = 136},
+        hands = {name = "Nyame Gauntlets", priority = 91},
+        ring1 = {name = "Epaminondas's Ring", priority = 0},
+        ring2 = {name = "Cornelia's Ring", priority = 0},
         back = gear.PLD_WSD_Cape,
-        -- waist = "Fotia Belt",
-        waist = "Sailfi Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Sulev. Leggings +2"
+        -- waist = {name = "Fotia Belt", priority = 0},
+        waist = {name = "Sailfi Belt +1", priority = 0},
+        legs = {name = "Sulev. Cuisses +2", priority = 50},
+        feet = {name = "Sulev. Leggings +2", priority = 20}
     }
 
     sets.precast.WS.DT = {
-        ammo = "Staunch Tathlum +1",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Loricate Torque +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
 
     sets.precast.WS.Acc = {
-        ammo = "Hasty Pinion +1",
-        head = "Ynglinga Sallet",
-        neck = "Combatant's Torque",
-        ear1 = "Mache Earring +1",
-        ear2 = "Telos Earring",
+        ammo = {name = "Hasty Pinion +1", priority = 0},
+        head = {name = "Ynglinga Sallet", priority = 43},
+        neck = {name = "Combatant's Torque", priority = 0},
+        ear1 = {name = "Mache Earring +1", priority = 0},
+        ear2 = {name = "Telos Earring", priority = 0},
         body = gear.Valo_WSD_body,
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Ramuh Ring +1",
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Ramuh Ring +1", priority = 0},
+        ring2 = {name = "Ramuh Ring +1", priority = 0},
         --back = "Ground. Mantle +1",
-        waist = "Olseni Belt",
+        waist = {name = "Olseni Belt", priority = 0},
         legs = gear.Carmine_D_Legs,
-        feet = "Sulev. Leggings +2"
+        feet = {name = "Sulev. Leggings +2", priority = 20}
     }
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {
-        neck = "Fotia Gorget",
-        ear1 = "Brutal Earring",
-        ear2 = "Moonshade Earring"
+        neck = {name = "Fotia Gorget", priority = 0},
+        ear1 = {name = "Brutal Earring", priority = 0},
+        ear2 = {name = "Moonshade Earring", priority = 0}
     })
     sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {
-        neck = "Fotia Gorget",
-        ear1 = "Mache Earring +1",
-        ear2 = "Moonshade Earring"
+        neck = {name = "Fotia Gorget", priority = 0},
+        ear1 = {name = "Mache Earring +1", priority = 0},
+        ear2 = {name = "Moonshade Earring", priority = 0}
     })
 
     sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
-        neck = "Fotia Gorget",
-        ear1 = "Brutal Earring",
-        ear2 = "Moonshade Earring"
+        neck = {name = "Fotia Gorget", priority = 0},
+        ear1 = {name = "Brutal Earring", priority = 0},
+        ear2 = {name = "Moonshade Earring", priority = 0}
     })
     sets.precast.WS['Chant du Cygne'].Acc =
         set_combine(sets.precast.WS.Acc, {
-            neck = "Fotia Gorget",
-            ear1 = "Mache Earring +1",
-            ear2 = "Moonshade Earring"
+            neck = {name = "Fotia Gorget", priority = 0},
+            ear1 = {name = "Mache Earring +1", priority = 0},
+            ear2 = {name = "Moonshade Earring", priority = 0}
         })
 
     sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
         neck = gear.JSE_Neck,
-        ear1 = "Ishvara Earring",
-        ear2 = "Moonshade Earring"
+        ear1 = {name = "Ishvara Earring", priority = 0},
+        ear2 = {name = "Moonshade Earring", priority = 0}
     })
     sets.precast.WS['Savage Blade'].Acc =
         set_combine(sets.precast.WS.Acc,
-                    {ear1 = "Mache Earring +1", ear2 = "Telos Earring"})
+                    {ear1 = {name = "Mache Earring +1", priority = 0}, ear2 = {name = "Telos Earring", priority = 0}})
 
 
     sets.precast.WS['Sanguine Blade'] = {
         ammo = "Ghastly Tathlum +1",
-        head = "Pixie Hairpin +1",
-        neck = "Fotia Gorget",
-        ear1 = "Friomisi Earring",
-        ear2 = "Crematio Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
-        ring1 = "Archon Ring",
-        ring2 = "Metamor. Ring +1",
-        back = "Toro Cape",
-        waist = "Fotia Belt",
-        legs = "Nyame Flanchard",
-        feet = "Nyame Sollerets"
+        head = {name = "Pixie Hairpin +1", priority = -35},
+        neck = {name = "Fotia Gorget", priority = 0},
+        ear1 = {name = "Friomisi Earring", priority = 0},
+        ear2 = {name = "Crematio Earring", priority = 0},
+        body = {name = "Nyame Mail", priority = 136},
+        hands = {name = "Nyame Gauntlets", priority = 91},
+        ring1 = {name = "Archon Ring", priority = 0},
+        ring2 = {name = "Metamor. Ring +1", priority = -60},
+        back = {name = "Toro Cape", priority = 0},
+        waist = {name = "Fotia Belt", priority = 0},
+        legs = {name = "Nyame Flanchard", priority = 114},
+        feet = {name = "Nyame Sollerets", priority = 68}
     }
 
     sets.precast.WS['Atonement'] = {
-        ammo = "Paeapua",
-        head = "Loess Barbuta +1",
-        neck = "Moonlight Necklace",
-        ear1 = "Friomisi Earring",
-        ear2 = "Trux Earring",
+        ammo = {name = "Paeapua", priority = 0},
+        head = {name = "Loess Barbuta +1", priority = 105},
+        neck = {name = "Moonlight Necklace", priority = 0},
+        ear1 = {name = "Friomisi Earring", priority = 0},
+        ear2 = {name = "Trux Earring", priority = 0},
         body = gear.Souveran_C_Body,
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Apeile Ring +1",
-        ring2 = "Apeile Ring",
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Apeile Ring +1", priority = 0},
+        ring2 = {name = "Apeile Ring", priority = 0},
         back = gear.PLD_Enmity_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Eschite_A_Feet
     }
 
     -- Swap to these on Moonshade using WS if at 3000 TP
-    sets.MaxTP = {ear1 = "Cessance Earring", ear2 = "Brutal Earring"}
-    sets.AccMaxTP = {ear1 = "Mache Earring +1", ear2 = "Telos Earring"}
+    sets.MaxTP = {ear1 = {name = "Cessance Earring", priority = 0}, ear2 = {name = "Brutal Earring", priority = 0}}
+    sets.AccMaxTP = {ear1 = {name = "Mache Earring +1", priority = 0}, ear2 = {name = "Telos Earring", priority = 0}}
 
     --------------------------------------
     -- Midcast sets
     --------------------------------------
 
     sets.midcast.FastRecast = {
-        main = "Sakpata's Sword",
-        sub = "Chanter's Shield",
-        ammo = "Hasty Pinion +1",
+        main = {name = "Sakpata's Sword", priority = 100},
+        sub = {name = "Chanter's Shield", priority = 22},
+        ammo = {name = "Hasty Pinion +1", priority = 0},
         head = gear.Carmine_D_Head,
-        neck = "Baetyl Pendant",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Loquac. Earring",
+        neck = {name = "Baetyl Pendant", priority = 0},
+        ear1 = {name = "Enchntr. Earring +1", priority = 0},
+        ear2 = {name = "Loquac. Earring", priority = 0},
         body = gear.AF_Body,
-        hands = "Leyline Gloves",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Kishar Ring",
+        hands = {name = "Leyline Gloves", priority = 25},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Kishar Ring", priority = 0},
         back = gear.PLD_FC_Cape,
-        waist = "Creed Baudrier",
-        legs = "Enif Cosciales",
-        feet = "Odyssean Greaves"
+        waist = {name = "Creed Baudrier", priority = 40},
+        legs = {name = "Enif Cosciales", priority = 40},
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.midcast.FastRecast.DT = {
-        main = "Sakpata's Sword",
-        sub = "Duban",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Sakpata's Sword", priority = 100},
+        sub = {name = "Duban", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Loricate Torque +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
@@ -531,126 +536,126 @@ function init_gear_sets()
     sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
 
     sets.midcast.Cure = {
-        main = "Sakpata's Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Sacro Gorget",
-        ear1 = "Nourish. Earring +1",
-        ear2 = "Chevalier's Earring",
-        body = "Jumalik Mail",
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Defending Ring",
-        ring2 = "Moonlight Ring",
+        main = {name = "Sakpata's Sword", priority = 100},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Loess Barbuta +1", priority = 105},
+        neck = {name = "Sacro Gorget", priority = 0},
+        ear1 = {name = "Nourish. Earring +1", priority = 0},
+        ear2 = {name = "Chevalier's Earring", priority = 0},
+        body = {name = "Jumalik Mail", priority = 116},
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_Enmity_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Carmine_D_Legs,
-        feet = "Odyssean Greaves"
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.midcast.Cure.SIRD = {
-        main = "Deacon Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
-        head = "Souveran Schaller +1",
-        neck = "Loricate Torque +1",
-        ear1 = "Nourish. Earring +1",
-        ear2 = "Magnetic Earring",
-        body = "Jumalik Mail",
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Defending Ring",
-        ring2 = "Moonlight Ring",
+        main = {name = "Deacon Sword", priority = 0},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = gear.Souveran_C_Head,
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Nourish. Earring +1", priority = 0},
+        ear2 = {name = "Magnetic Earring", priority = 0},
+        body = {name = "Jumalik Mail", priority = 116},
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_Enmity_Cape,
-        waist = "Creed Baudrier",
-        legs = "Founder's Hose",
-        feet = "Odyssean Greaves"
+        waist = {name = "Creed Baudrier", priority = 40},
+        legs = {name = "Founder's Hose", priority = 54},
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.midcast.Cure.DT = {
-        main = "Deacon Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Deacon Sword", priority = 0},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_D_Head,
-        neck = "Loricate Torque +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
 
     sets.midcast.Reprisal = {
-        main = "Sakpata's Sword",
-        ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        main = {name = "Sakpata's Sword", priority = 100},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Loess Barbuta +1", priority = 105},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
-        legs = "Arke Cosc. +1",
+        waist = {name = "Creed Baudrier", priority = 40},
+        legs = {name = "Arke Cosc. +1", priority = 191},
         feet = gear.Souveran_D_Feet
     }
 
     sets.Self_Healing = {
-        main = "Deacon Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Deacon Sword", priority = 0},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Sacro Gorget",
-        ear1 = "Nourish. Earring +1",
-        ear2 = "Chevalier's Earring",
+        neck = {name = "Sacro Gorget", priority = 0},
+        ear1 = {name = "Nourish. Earring +1", priority = 0},
+        ear2 = {name = "Chevalier's Earring", priority = 0},
         body = gear.Souveran_C_Body,
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
 
     sets.Self_Healing.SIRD = {
-        main = "Deacon Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Deacon Sword", priority = 0},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Loricate Torque +1",
-        ear1 = "Nourish. Earring +1",
-        ear2 = "Magnetic Earring",
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Nourish. Earring +1", priority = 0},
+        ear2 = {name = "Magnetic Earring", priority = 0},
         body = gear.Souveran_C_Body,
-        hands = "Macabre Gaunt. +1",
-        ring1 = "Defending Ring",
-        ring2 = "Moonlight Ring",
-        back = "Solemnity Cape",
-        waist = "Flume Belt +1",
-        legs = "Founder's Hose",
-        feet = "Odyssean Greaves"
+        hands = {name = "Macabre Gaunt. +1", priority = 29},
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Moonlight Ring", priority = 110},
+        back = {name = "Solemnity Cape", priority = 0},
+        waist = {name = "Flume Belt +1", priority = 0},
+        legs = {name = "Founder's Hose", priority = 54},
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.Self_Healing.DT = {
-        main = "Deacon Sword",
-        sub = "Sacro Bulwark",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Deacon Sword", priority = 0},
+        sub = {name = "Sacro Bulwark", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Loricate Torque +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
+        waist = {name = "Creed Baudrier", priority = 40},
         legs = gear.Souveran_C_Legs,
         feet = gear.Souveran_D_Feet
     }
@@ -659,47 +664,47 @@ function init_gear_sets()
         hands = gear.Souveran_C_Hands,
         feet = gear.Souveran_D_Feet
     }
-    sets.Self_Refresh = {waist = "Gishdubar Sash"}
+    sets.Self_Refresh = {waist = {name = "Gishdubar Sash", priority = 0}}
     sets.Enhancing_Received = {}
 
     sets.midcast['Enhancing Magic'] = {
-        main = "Colada",
-        sub = "Duban",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Colada", priority = 0},
+        sub = {name = "Duban", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Carmine_D_Head,
-        neck = "Melic Torque",
-        ear1 = "Mimir Earring",
-        ear2 = "Andoaa Earring",
-        body = "Shab. Cuirass +1",
-        hands = "Regal Gauntlets",
-        ring1 = "Defending Ring",
-        ring2 = "Kishar Ring",
+        neck = {name = "Melic Torque", priority = 0},
+        ear1 = {name = "Mimir Earring", priority = 0},
+        ear2 = {name = "Andoaa Earring", priority = 0},
+        body = {name = "Shab. Cuirass +1", priority = 115},
+        hands = {name = "Regal Gauntlets", priority = 205},
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Kishar Ring", priority = 0},
         back = "Merciful Cape",
         waist = "Olympus Sash",
         legs = gear.Carmine_D_Legs,
-        feet = "Odyssean Greaves"
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.midcast['Enhancing Magic'].SIRD = {
-        main = "Colada",
-        sub = "Duban",
-        ammo = "Staunch Tathlum +1",
+        main = {name = "Colada", priority = 0},
+        sub = {name = "Duban", priority = 0},
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
-        neck = "Melic Torque",
-        ear1 = "Mimir Earring",
-        ear2 = "Magnetic Earring",
-        body = "Shab. Cuirass +1",
+        neck = {name = "Melic Torque", priority = 0},
+        ear1 = {name = "Mimir Earring", priority = 0},
+        ear2 = {name = "Magnetic Earring", priority = 0},
+        body = {name = "Shab. Cuirass +1", priority = 115},
         hands = gear.Souveran_C_Hands,
-        ring1 = "Defending Ring",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = "Merciful Cape",
         waist = "Olympus Sash",
         legs = gear.AF_Legs,
-        feet = "Odyssean Greaves"
+        feet = {name = "Odyssean Greaves", priority = 20}
     }
 
     sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],
-                                         {waist = "Siegel Sash"})
+                                         {waist = {name = "Siegel Sash", priority = 0}})
 
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'],
                                        {ring2 = "Sheltered Ring"})
@@ -707,26 +712,26 @@ function init_gear_sets()
                                      {ring2 = "Sheltered Ring"})
 
     sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
-        main = "Sakpata's Sword",
+        main = {name = "Sakpata's Sword", priority = 100},
         hands = gear.Souveran_C_Hands,
-        back = "Weard Mantle",
-        legs = "Sakpata's Cuisses",
+        back = {name = "Weard Mantle", priority = 40},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
         feet = gear.Souveran_D_Feet
     })
     sets.midcast.Phalanx.SIRD = set_combine(
                                     sets.midcast['Enhancing Magic'].SIRD, {
-            main = "Sakpata's Sword",
-            sub = "Duban",
+            main = {name = "Sakpata's Sword", priority = 100},
+            sub = {name = "Duban", priority = 0},
             hands = gear.Souveran_C_Hands,
-            back = "Weard Mantle",
+            back = {name = "Weard Mantle", priority = 40},
             feet = gear.Souveran_D_Feet
         })
     sets.midcast.Phalanx.DT = set_combine(sets.midcast.Phalanx.SIRD, {})
     sets.Phalanx_Received = {
-        main = "Sakpata's Sword",
+        main = {name = "Sakpata's Sword", priority = 100},
         hands = gear.Souveran_C_Hands,
-        back = "Weard Mantle",
-        legs = "Sakpata's Cuisses",
+        back = {name = "Weard Mantle", priority = 40},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
         feet = gear.Souveran_D_Feet
     }
     --------------------------------------
@@ -734,87 +739,85 @@ function init_gear_sets()
     --------------------------------------
 
     sets.resting = {
-        ammo = "Homiliary",
-        head = "Jumalik Helm",
-        neck = "Coatl Gorget +1",
-        ear1 = "Etiolation Earring",
+        ammo = {name = "Homiliary", priority = 0},
+        head = {name = "Jumalik Helm", priority = 45},
+        neck = {name = "Coatl Gorget +1", priority = 0},
+        ear1 = {name = "Etiolation Earring", priority = 50},
         --ear2 = "Ethereal Earring",
-        body = "Jumalik Mail",
+        body = {name = "Jumalik Mail", priority = 116},
         hands = gear.Souveran_C_Hands,
-        ring1 = "Defending Ring",
-        ring2 = "Stikini Ring +1",
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Stikini Ring +1", priority = 0},
         back = gear.PLD_DT_Cape,
-        waist = "Fucho-no-obi",
-        legs = "Sulev. Cuisses +2",
+        waist = {name = "Fucho-no-obi", priority = 0},
+        legs = {name = "Sulev. Cuisses +2", priority = 50},
         feet = gear.Relic_Feet
     }
 
     -- Idle sets
     sets.idle = {}
     sets.idle.PDT = {
-        ammo =  "Staunch Tathlum +1",
-        head = "Sakpata's Helm",
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
-        body = "Sakpata's Breastplate",
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Warden's Ring",
+        ammo =  {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Sakpata's Helm", priority = 91},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Warden's Ring", priority = 0},
         back = gear.PLD_DT_Cape,
-        waist = "Flume Belt +1",
-        legs = "Sakpata's Cuisses",
-        feet = "Sakpata's Leggings"
+        waist = {name = "Flume Belt +1", priority = 0},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
+        feet = {name = "Sakpata's Leggings", priority = 68}
     }
 
     sets.idle.Block = {
-        ammo = "Staunch Tathlum +1",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Empy_Head,
-        neck = "Diemer Gorget",
-        ear1 = "Creed Earring",
-        ear2 = "Foresti Earring",
-        body = "Sakpata's Breastplate",
+        neck = {name = "Diemer Gorget", priority = 0},
+        ear1 = {name = "Creed Earring", priority = 30},
+        ear2 = {name = "Chevalier's Earring", priority = 0},
+        body = {name = "Sakpata's Breastplate", priority = 136},
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Sakpata's Cuisses",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
+        back = {name = "Shadow Mantle", priority = 0},
+        waist = {name = "Flume Belt +1", priority = 0},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
         feet = gear.Souveran_D_Feet
     }
 
     sets.idle.MDT = {
-        ammo = "Staunch Tathlum +1",
-        head = "Nyame Helm",
-        neck = "Warder's Charm +1",
-        ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
-        ring1 = "Archon Ring",
-        ring2 = "Shadow Ring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Nyame Helm", priority = 91},
+        neck = {name = "Warder's Charm +1", priority = 0},
+        ear1 = {name = "Etiolation Earring", priority = 50},
+        ear2 = {name = "Sanare Earring", priority = 0},
+        body = {name = "Nyame Mail", priority = 136},
+        hands = {name = "Nyame Gauntlets", priority = 91},
+        ring1 = {name = "Archon Ring", priority = 0},
+        ring2 = {name = "Shadow Ring", priority = 0},
         back = gear.PLD_FC_Cape,
-        waist = "Carrier's Sash",
-        legs = "Nyame Flanchard",
-        feet = "Nyame Sollerets"
+        waist = {name = "Carrier's Sash", priority = 20},
+        legs = {name = "Nyame Flanchard", priority = 114},
+        feet = {name = "Nyame Sollerets", priority = 68}
     }
 
     sets.idle.Tank = {
-        ammo = "Staunch Tathlum +1",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Empy_Head,
-        --neck = "Warder's Charm +1",
-        neck = "Combatant's Torque",
-        ear1 = "Creed Earring",
-        ear2 = "Foresti Earring",
-        body = "Sakpata's Breastplate",
-        --hands = gear.Souveran_C_Hands,
-        hands = gear.Empy_Hands,
-        ring1 = {name = "Moonlight Ring", bag = "wardrobe3"},
-        ring2 = "Vexer Ring +1",
-        --ring2 = "Shadow Ring",
+        neck = {name = "Warder's Charm +1", priority = 0},
+        ear1 = {name = "Creed Earring", priority = 30},
+        ear2 = {name = "Chevalier's Earring", priority = 0},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = gear.Souveran_C_Hands,
+        ring1 = {name = "Moonlight Ring", priority = 110, bag = "wardrobe3"},
+        ring2 = {name = "Vexer Ring +1", priority = 55},
+        --ring2 = {name = "Shadow Ring", priority = 0},
         back = gear.PLD_Enmity_Cape,
-        waist = "Creed Baudrier",
-        --waist = "Flume Belt +1",
+        waist = {name = "Creed Baudrier", priority = 40},
+        --waist = {name = "Flume Belt +1", priority = 0},
         legs = gear.Empy_Legs,
         feet = gear.AF_Feet
     }
@@ -822,26 +825,26 @@ function init_gear_sets()
     sets.idle = sets.idle.Tank
 
     sets.idle.Kiting = {
-        ammo = "Staunch Tathlum +1",
-        head = "Sakpata's Helm",
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
-        body = "Sakpata's Breastplate",
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Warden's Ring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Sakpata's Helm", priority = 91},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Warden's Ring", priority = 0},
         back = gear.PLD_DT_Cape,
-        waist = "Flume Belt +1",
+        waist = {name = "Flume Belt +1", priority = 0},
         legs = gear.Carmine_D_Legs,
-        feet = "Hippo. Socks +1"
+        feet = {name = "Hippo. Socks +1", priority = 13}
     }
 
     sets.Kiting = {legs = gear.Carmine_D_Legs}
 
-    sets.latent_refresh = {waist = "Fucho-no-obi"}
+    sets.latent_refresh = {waist = {name = "Fucho-no-obi", priority = 0}}
     sets.latent_refresh_grip = {sub = "Oneiros Grip"}
-    sets.latent_regen = {ring1 = "Apeile Ring +1", ring2 = "Apeile Ring"}
+    sets.latent_regen = {ring1 = {name = "Apeile Ring +1", priority = 0}, ring2 = {name = "Apeile Ring", priority = 0}}
     sets.DayIdle = {}
     sets.NightIdle = {}
 
@@ -852,35 +855,35 @@ function init_gear_sets()
     --------------------------------------
 
     sets.engaged = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Asperity Necklace",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
+        ammo = {name = "Aurgelmir Orb +1", priority = 0},
+        head = {name = "Flam. Zucchetto +2", priority = 80},
+        neck = {name = "Asperity Necklace", priority = 0},
+        ear1 = {name = "Cessance Earring", priority = 0},
+        ear2 = {name = "Brutal Earring", priority = 0},
         body = gear.Valo_TP_body,
-        hands = "Sulev. Gauntlets +2",
-        ring1 = "Flamma Ring",
-        ring2 = "Petrov Ring",
+        hands = {name = "Sulev. Gauntlets +2", priority = 30},
+        ring1 = {name = "Flamma Ring", priority = 0},
+        ring2 = {name = "Petrov Ring", priority = 0},
         back = gear.PLD_DD_TP_Cape,
-        waist = "Sailfi Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
+        waist = {name = "Sailfi Belt +1", priority = 0},
+        legs = {name = "Sulev. Cuisses +2", priority = 50},
+        feet = {name = "Flam. Gambieras +2", priority = 40}
     }
 
     sets.engaged.Acc = {
-        ammo = "Hasty Pinion +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Combatant's Torque",
-        ear1 = "Mache Earring +1",
-        ear2 = "Telos Earring",
+        ammo = {name = "Hasty Pinion +1", priority = 0},
+        head = {name = "Flam. Zucchetto +2", priority = 80},
+        neck = {name = "Combatant's Torque", priority = 0},
+        ear1 = {name = "Mache Earring +1", priority = 0},
+        ear2 = {name = "Telos Earring", priority = 0},
         body = gear.Valo_WSD_body,
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Ramuh Ring +1",
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Ramuh Ring +1", priority = 0},
+        ring2 = {name = "Ramuh Ring +1", priority = 0},
         --back = "Ground. Mantle +1",
-        waist = "Tempus Fugit",
+        waist = {name = "Tempus Fugit", priority = 0},
         legs = gear.Carmine_D_Legs,
-        feet = "Sulev. Leggings +2"
+        feet = {name = "Sulev. Leggings +2", priority = 20}
     }
 
     sets.engaged.DW = sets.engaged
@@ -889,72 +892,71 @@ function init_gear_sets()
 
     sets.engaged.Tank =  {
         head = gear.Empy_Head,
-    --neck = "Warder's Charm +1",
-    neck = "Combatant's Torque",
-    ear1 = "Creed Earring",
-    ear2 = "Foresti Earring",
-    body = "Sakpata's Breastplate",
+    neck = {name = "Warder's Charm +1", priority = 0},
+    ear1 = {name = "Creed Earring", priority = 30},
+    ear2 = {name = "Chevalier's Earring", priority = 0},
+    body = {name = "Sakpata's Breastplate", priority = 136},
     --hands = gear.Souveran_C_Hands,
-    hands = gear.Empy_Hands,
-    ring1 = {name = "Moonlight Ring", bag = "wardrobe3"},
-    ring2 = "Vexer Ring +1",
-    --ring2 = "Shadow Ring",
+    hands = gear.Souveran_C_Hands,
+    ring1 = {name = "Moonlight Ring", priority = 110, bag = "wardrobe3"},
+    ring2 = {name = "Vexer Ring +1", priority = 55},
+    --ring2 = {name = "Shadow Ring", priority = 0},
     back = gear.PLD_Enmity_Cape,
-    waist = "Creed Baudrier",
-    --waist = "Flume Belt +1",
+    waist = {name = "Creed Baudrier", priority = 40},
+    --waist = {name = "Flume Belt +1", priority = 0},
     legs = gear.Empy_Legs,
     feet = gear.AF_Feet
 }
 
     sets.engaged.DDTank = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Sulevia's Mask +2",
-        -- neck="Loricate Torque +1",
-        neck = "Combatant's Torque",
-        ear1 = "Brutal Earring",
-        ear2 = "Cessance Earring",
-        body = "Sakpata's Breastplate",
-        hands = "Sulev. Gauntlets +2",
-        ring1 = {name = "Moonlight Ring", bag = "wardrobe3"},
-        ring2 = {name = "Moonlight Ring", bag = "wardrobe5"},
+        ammo = {name = "Aurgelmir Orb +1", priority = 0},
+        head = {name = "Sulevia's Mask +2", priority = 40},
+        -- neck={name = "Loricate Torque +1", priority = 0},
+        neck = {name = "Combatant's Torque", priority = 0},
+        ear1 = {name = "Brutal Earring", priority = 0},
+        ear2 = {name = "Cessance Earring", priority = 0},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sulev. Gauntlets +2", priority = 30},
+        ring1 = {name = "Moonlight Ring", priority = 110, bag = "wardrobe3"},
+        ring2 = {name = "Moonlight Ring", priority = 110, bag = "wardrobe5"},
         -- back = gear.PLD_DD_TP_Cape,
         back = gear.PLD_Enmity_Cape,
-        waist = "Sailfi Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Sulev. Leggings +2"
+        waist = {name = "Sailfi Belt +1", priority = 0},
+        legs = {name = "Sulev. Cuisses +2", priority = 50},
+        feet = {name = "Sulev. Leggings +2", priority = 20}
     }
 
     sets.engaged.Acc.DDTank = {
-        ammo = "Hasty Pinion +1",
-        head = "Sakpata's Helm",
-        neck = "Loricate Torque +1",
-        ear1 = "Mache Earring +1",
-        ear2 = "Telos Earring",
+        ammo = {name = "Hasty Pinion +1", priority = 0},
+        head = {name = "Sakpata's Helm", priority = 91},
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear1 = {name = "Mache Earring +1", priority = 0},
+        ear2 = {name = "Telos Earring", priority = 0},
         -- body = "Tartarus Platemail",
-        body = "Sakpata's Plate",
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Defending Ring",
-        ring2 = "Patricius Ring",
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Patricius Ring", priority = 0},
         -- back = gear.PLD_DD_TP_Cape,
         back = gear.PLD_Enmity_Cape,
-        waist = "Sailfi Belt +1",
-        legs = "Sakpata's Cuisses",
-        feet = "Sakpata's Leggings"
+        waist = {name = "Sailfi Belt +1", priority = 0},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
+        feet = {name = "Sakpata's Leggings", priority = 68}
     }
 
     sets.engaged.NoShellTank = {
-        ammo = "Staunch Tathlum +1",
-        head = "Jumalik Helm",
-        neck = "Loricate Torque +1",
-        ear1 = "Foresti Earring",
-        ear2 = "Etiolation Earring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Jumalik Helm", priority = 45},
+        neck = {name = "Loricate Torque +1", priority = 0},
+        ear2 = {name = "Chevalier's Earring", priority = 0},
+        ear2 = {name = "Etiolation Earring", priority = 50},
         body = gear.AF_Body,
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Defending Ring",
-        ring2 = "Moonlight Ring",
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Flume Belt +1",
-        legs = "Enif Cosciales",
+        waist = {name = "Flume Belt +1", priority = 0},
+        legs = {name = "Enif Cosciales", priority = 40},
         feet = gear.Relic_Feet
     }
 
@@ -970,124 +972,116 @@ function init_gear_sets()
 
     sets.Twilight = {head = "Twilight Helm", body = "Twilight Mail"}
 
-    -- Weapons sets
-    sets.weapons.SakpataAegis = {main = "Sakpata's Sword", sub = "Aegis"}
-    sets.weapons.NaeglingBlurred = {main = "Naegling", sub = "Blurred Shield +1"}
-    sets.weapons.SakpataDuban = {main = "Sakpata's Sword", sub = "Duban"}
-    sets.weapons.ClubDuban = {main = "Mafic Cudgel", sub = "Duban"}
-    sets.weapons.DualWeapons = {main = "Naegling", sub = "Demersal Degen +1"}
-    sets.weapons.MalignanceAegis = {main = "Malignance Sword", sub = "Aegis"}
-
     sets.defense.Block = {
-        ammo =  "Staunch Tathlum +1",
+        ammo =  {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Empy_Head,
-        neck = "Diemer Gorget",
-        ear1 = "Creed Earring",
-        ear2 = "Foresti Earring",
-        body = "Sakpata's Breastplate",
+        neck = {name = "Combatant's Torque", priority = 0},
+        ear1 = {name = "Creed Earring", priority = 30},
+        ear2 = {name = "Chevalier's Earring", priority = 0},
+        body = {name = "Sakpata's Breastplate", priority = 136},
         hands = gear.Souveran_C_Hands,
-        ring1 = "Defending Ring",
-        ring2 = "Warden's Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Sakpata's Cuisses",
+        ring1 = {name = "Defending Ring", priority = 0},
+        ring2 = {name = "Warden's Ring", priority = 0},
+        back = {name = "Shadow Mantle", priority = 0},
+        waist = {name = "Flume Belt +1", priority = 0},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
         feet = gear.Souveran_D_Feet
     }
 
     sets.defense.PDT = {
-        ammo = "Staunch Tathlum +1",
-        head = "Sakpata's Helm",
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
-        body = "Sakpata's Breastplate",
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Warden's Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Sakpata's Cuisses",
-        feet = "Sakpata's Leggings"
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Sakpata's Helm", priority = 91},
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Warden's Ring", priority = 0},
+        back = {name = "Shadow Mantle", priority = 0},
+        waist = {name = "Flume Belt +1", priority = 0},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
+        feet = {name = "Sakpata's Leggings", priority = 68}
     }
 
     sets.defense.PDT_HP = {
-        ammo =  "Staunch Tathlum +1",
+        ammo =  {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_D_Head,
-        neck = "Unmoving Collar +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
+        neck = {name = "Unmoving Collar +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
         body = gear.AF_Body,
         hands = gear.Souveran_C_Hands,
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Creed Baudrier",
-        legs = "Arke Cosc. +1",
+        waist = {name = "Creed Baudrier", priority = 40},
+        legs = {name = "Arke Cosc. +1", priority = 191},
         feet = gear.Souveran_D_Feet
     }
 
     sets.defense.MDT = {
-        ammo = "Staunch Tathlum +1",
-        head = "Nyame Helm",
-        neck = "Warder's Charm +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Sanare Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
-        ring1 = "Archon Ring",
-        ring2 = "Shadow Ring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Nyame Helm", priority = 91},
+        neck = {name = "Warder's Charm +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Sanare Earring", priority = 0},
+        body = {name = "Nyame Mail", priority = 136},
+        hands = {name = "Nyame Gauntlets", priority = 91},
+        ring1 = {name = "Archon Ring", priority = 0},
+        ring2 = {name = "Shadow Ring", priority = 0},
         back = gear.PLD_FC_Cape,
-        waist = "Carrier's Sash",
-        legs = "Nyame Flanchard",
-        feet = "Nyame Sollerets"
+        waist = {name = "Carrier's Sash", priority = 20},
+        legs = {name = "Nyame Flanchard", priority = 114},
+        feet = {name = "Nyame Sollerets", priority = 68}
     }
 
     sets.defense.MDT_HP = {
-        ammo = "Staunch Tathlum +1",
-        head = "Sakpata's Helm",
-        neck = "Warder's Charm +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
-        body = "Sakpata's Plate",
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Sakpata's Helm", priority = 91},
+        neck = {name = "Warder's Charm +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Carrier's Sash",
-        legs = "Sakpata's Cuisses",
-        feet = "Sakpata's Leggings"
+        waist = {name = "Carrier's Sash", priority = 20},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
+        feet = {name = "Sakpata's Leggings", priority = 68}
     }
 
     sets.defense.MEVA = {
-        ammo = "Staunch Tathlum +1",
-        head = "Nyame Helm",
-        neck = "Warder's Charm +1",
-        ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
-        ring1 = "Purity Ring",
-        ring2 = "Shadow Ring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Nyame Helm", priority = 91},
+        neck = {name = "Warder's Charm +1", priority = 0},
+        ear1 = {name = "Etiolation Earring", priority = 50},
+        ear2 = {name = "Sanare Earring", priority = 0},
+        body = {name = "Nyame Mail", priority = 136},
+        hands = {name = "Nyame Gauntlets", priority = 91},
+        ring1 = {name = "Purity Ring", priority = 0},
+        ring2 = {name = "Shadow Ring", priority = 0},
         back = gear.PLD_FC_Cape,
-        waist = "Asklepian Belt",
-        legs = "Nyame Flanchard",
-        feet = "Nyame Sollerets"
+        waist = {name = "Asklepian Belt", priority = 0},
+        legs = {name = "Nyame Flanchard", priority = 114},
+        feet = {name = "Nyame Sollerets", priority = 68}
     }
 
     sets.defense.MEVA_HP = {
-        ammo = "Staunch Tathlum +1",
-        head = "Sakpata's Helm",
-        neck = "Warder's Charm +1",
-        ear1 = "Odnowa Earring +1",
-        ear2 = "Tuisto Earring",
-        body = "Sakpata's Plate",
-        hands = "Sakpata's Gauntlets",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
+        ammo = {name = "Staunch Tathlum +1", priority = 0},
+        head = {name = "Sakpata's Helm", priority = 91},
+        neck = {name = "Warder's Charm +1", priority = 0},
+        ear1 = {name = "Odnowa Earring +1", priority = 110},
+        ear2 = {name = "Tuisto Earring", priority = 150},
+        body = {name = "Sakpata's Breastplate", priority = 136},
+        hands = {name = "Sakpata's Gauntlets", priority = 91},
+        ring1 = {name = "Gelatinous Ring +1", priority = 100},
+        ring2 = {name = "Moonlight Ring", priority = 110},
         back = gear.PLD_DT_Cape,
-        waist = "Asklepian Belt",
-        legs = "Sakpata's Cuisses",
-        feet = "Sakpata's Leggings"
+        waist = {name = "Asklepian Belt", priority = 0},
+        legs = {name = "Sakpata's Cuisses", priority = 114},
+        feet = {name = "Sakpata's Leggings", priority = 68}
     }
 
     sets.defense.PDT_Reraise = set_combine(sets.defense.PDT_HP, {
@@ -1104,14 +1098,29 @@ function init_gear_sets()
     --------------------------------------
     sets.buff.Doom = {
         neck = "Nicander's Necklace", -- 20
-        ring1 = {name = "Eshmun's Ring", bag = "wardrobe4"}, -- 20
-        ring2 = {name = "Eshmun's Ring", bag = "wardrobe3"}, -- 20
-        waist = "Gishdubar Sash" -- 10
+        ring1 = {name = "Eshmun's Ring", bag = "wardrobe4", priority = 0}, -- 20
+        ring2 = {name = "Eshmun's Ring", bag = "wardrobe3", priority = 0}, -- 20
+        waist = {name = "Gishdubar Sash", priority = 0} -- 10
     }
-    sets.buff.Sleep = {neck = "Vim Torque +1"}
+    sets.buff.Sleep = {neck = {name = "Vim Torque +1", priority = 0}}
     sets.buff.Cover = {body = gear.Relic_Body}
 
-    sets.TreasureHunter = {feet = "Volte Boots", waist = "Chaac Belt"}
+    sets.TreasureHunter = {feet = {name = "Volte Boots", priority = 57}, waist = {name = "Chaac Belt", priority = 0}}
+
+    -- Weapons sets
+    sets.weapons.SakpataAegis = {main = {name = "Sakpata's Sword", priority = 100}, sub = "Aegis"}
+    sets.weapons.NaeglingBlurred = {main = "Naegling", sub = "Blurred Shield +1"}
+    sets.weapons.SakpataDuban = {main = {name = "Sakpata's Sword", priority = 100}, sub = {name = "Duban", priority = 0}}
+    sets.weapons.ClubDuban = {main = "Mafic Cudgel", sub = {name = "Duban", priority = 0}}
+    sets.weapons.DualWeapons = {main = "Naegling", sub = "Demersal Degen +1"}
+    sets.weapons.MalignanceAegis = {main = "Malignance Sword", sub = "Aegis"}
+    sets.weapons.ExcalAegis = {main = "Excalibur", sub = "Aegis"}
+    sets.weapons.ExcalDuban = {main = "Excalibur", sub = "Duban"}
+
+
+
+
+
 end
 
 -- Select default macro book on initial load or subjob change.

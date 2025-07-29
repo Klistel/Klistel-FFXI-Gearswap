@@ -404,12 +404,13 @@ function job_check_buff()
 end
 
 buff_spell_lists = {
-	Auto = {	
+	Auto = {
 		{Name='Crusade',Buff='Enmity Boost',SpellID=476,When='Always'},
 		{Name='Reprisal',Buff='Reprisal',SpellID=97,When='Always'},
 		{Name='Phalanx',Buff='Phalanx',SpellID=106,When='Always'},
+		{Name='Protect V',Buff='Protect',SpellID=47,When='Always'}
 	},
-	
+
 	Default = {
 		{Name='Crusade',Buff='Enmity Boost',SpellID=476,Reapply=false},
 		{Name='Reprisal',Buff='Reprisal',SpellID=97,Reapply=false},
