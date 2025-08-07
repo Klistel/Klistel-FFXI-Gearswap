@@ -67,7 +67,7 @@ sets.precast.JA['Jump'] = {
 
 sets.precast.JA['High Jump'] = sets.precast.JA['Jump']
 sets.precast.JA['Spirit Jump'] = set_combine(sets.precast.JA['Jump'], {
-    legs = gear.Empy_Feet
+    legs = gear.Empy_Legs
     --    hands="Emi. Gauntlets +1", 
     --    legs=gear.Valo_STP_legs
 })

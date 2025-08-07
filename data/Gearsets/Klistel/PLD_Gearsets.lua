@@ -158,8 +158,8 @@ function init_gear_sets()
     --------------------------------------
 
     sets.Enmity = {
-        main = {name = "Sakpata's Sword", priority = 100},
-        sub = {name = "Duban", priority = 0},
+        --main = {name = "Sakpata's Sword", priority = 100},
+        --sub = {name = "Duban", priority = 0},
         ammo = {name = "Paeapua", priority = 0},
         head = {name = "Loess Barbuta +1", priority = 105},
         neck = {name = "Moonlight Necklace", priority = 0},
@@ -176,8 +176,8 @@ function init_gear_sets()
     }
 
     sets.Enmity.SIRD = {
-        main = {name = "Sakpata's Sword", priority = 100},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Sakpata's Sword", priority = 100},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = {name = "Loess Barbuta +1", priority = 105},
         neck = {name = "Moonlight Necklace", priority = 0},
@@ -316,8 +316,8 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-        main = {name = "Sakpata's Sword", priority = 100},
-        sub = {name = "Chanter's Shield", priority = 22},
+        --main = {name = "Sakpata's Sword", priority = 100},
+        --sub = {name = "Chanter's Shield", priority = 22},
         ammo = {name = "Sapience Orb", priority = 0},
         -- ammo = "Impatiens",
         head = gear.Carmine_D_Head,
@@ -337,7 +337,7 @@ function init_gear_sets()
     }
 
     sets.precast.FC.DT = {
-        main = {name = "Sakpata's Sword", priority = 100},
+        --main = {name = "Sakpata's Sword", priority = 100},
         ammo = {name = "Sapience Orb", priority = 0},
         -- ammo = "Impatiens",
         head = gear.Souveran_C_Head,
@@ -492,8 +492,8 @@ function init_gear_sets()
     --------------------------------------
 
     sets.midcast.FastRecast = {
-        main = {name = "Sakpata's Sword", priority = 100},
-        sub = {name = "Chanter's Shield", priority = 22},
+        --main = {name = "Sakpata's Sword", priority = 100},
+        --sub = {name = "Chanter's Shield", priority = 22},
         ammo = {name = "Hasty Pinion +1", priority = 0},
         head = gear.Carmine_D_Head,
         neck = {name = "Baetyl Pendant", priority = 0},
@@ -510,8 +510,8 @@ function init_gear_sets()
     }
 
     sets.midcast.FastRecast.DT = {
-        main = {name = "Sakpata's Sword", priority = 100},
-        sub = {name = "Duban", priority = 0},
+        --main = {name = "Sakpata's Sword", priority = 100},
+        --sub = {name = "Duban", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
         neck = {name = "Loricate Torque +1", priority = 0},
@@ -536,8 +536,8 @@ function init_gear_sets()
     sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
 
     sets.midcast.Cure = {
-        main = {name = "Sakpata's Sword", priority = 100},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Sakpata's Sword", priority = 100},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = {name = "Loess Barbuta +1", priority = 105},
         neck = {name = "Sacro Gorget", priority = 0},
@@ -554,8 +554,8 @@ function init_gear_sets()
     }
 
     sets.midcast.Cure.SIRD = {
-        main = {name = "Deacon Sword", priority = 0},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Deacon Sword", priority = 0},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
         neck = {name = "Loricate Torque +1", priority = 0},
@@ -572,8 +572,8 @@ function init_gear_sets()
     }
 
     sets.midcast.Cure.DT = {
-        main = {name = "Deacon Sword", priority = 0},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Deacon Sword", priority = 0},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_D_Head,
         neck = {name = "Loricate Torque +1", priority = 0},
@@ -590,7 +590,7 @@ function init_gear_sets()
     }
 
     sets.midcast.Reprisal = {
-        main = {name = "Sakpata's Sword", priority = 100},
+        --main = {name = "Sakpata's Sword", priority = 100},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = {name = "Loess Barbuta +1", priority = 105},
         neck = {name = "Unmoving Collar +1", priority = 0},
@@ -607,8 +607,8 @@ function init_gear_sets()
     }
 
     sets.Self_Healing = {
-        main = {name = "Deacon Sword", priority = 0},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Deacon Sword", priority = 0},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
         neck = {name = "Sacro Gorget", priority = 0},
@@ -625,8 +625,8 @@ function init_gear_sets()
     }
 
     sets.Self_Healing.SIRD = {
-        main = {name = "Deacon Sword", priority = 0},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Deacon Sword", priority = 0},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
         neck = {name = "Loricate Torque +1", priority = 0},
@@ -643,8 +643,8 @@ function init_gear_sets()
     }
 
     sets.Self_Healing.DT = {
-        main = {name = "Deacon Sword", priority = 0},
-        sub = {name = "Sacro Bulwark", priority = 0},
+        --main = {name = "Deacon Sword", priority = 0},
+        --sub = {name = "Sacro Bulwark", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
         neck = {name = "Loricate Torque +1", priority = 0},
@@ -668,8 +668,8 @@ function init_gear_sets()
     sets.Enhancing_Received = {}
 
     sets.midcast['Enhancing Magic'] = {
-        main = {name = "Colada", priority = 0},
-        sub = {name = "Duban", priority = 0},
+       -- main = {name = "Colada", priority = 0},
+        --sub = {name = "Duban", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Carmine_D_Head,
         neck = {name = "Melic Torque", priority = 0},
@@ -686,8 +686,8 @@ function init_gear_sets()
     }
 
     sets.midcast['Enhancing Magic'].SIRD = {
-        main = {name = "Colada", priority = 0},
-        sub = {name = "Duban", priority = 0},
+        --main = {name = "Colada", priority = 0},
+        --sub = {name = "Duban", priority = 0},
         ammo = {name = "Staunch Tathlum +1", priority = 0},
         head = gear.Souveran_C_Head,
         neck = {name = "Melic Torque", priority = 0},
@@ -712,7 +712,7 @@ function init_gear_sets()
                                      {ring2 = "Sheltered Ring"})
 
     sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
-        main = {name = "Sakpata's Sword", priority = 100},
+        --main = {name = "Sakpata's Sword", priority = 100},
         hands = gear.Souveran_C_Hands,
         back = {name = "Weard Mantle", priority = 40},
         legs = {name = "Sakpata's Cuisses", priority = 114},
@@ -720,15 +720,15 @@ function init_gear_sets()
     })
     sets.midcast.Phalanx.SIRD = set_combine(
                                     sets.midcast['Enhancing Magic'].SIRD, {
-            main = {name = "Sakpata's Sword", priority = 100},
-            sub = {name = "Duban", priority = 0},
+            --main = {name = "Sakpata's Sword", priority = 100},
+           -- sub = {name = "Duban", priority = 0},
             hands = gear.Souveran_C_Hands,
             back = {name = "Weard Mantle", priority = 40},
             feet = gear.Souveran_D_Feet
         })
     sets.midcast.Phalanx.DT = set_combine(sets.midcast.Phalanx.SIRD, {})
     sets.Phalanx_Received = {
-        main = {name = "Sakpata's Sword", priority = 100},
+        --main = {name = "Sakpata's Sword", priority = 100},
         hands = gear.Souveran_C_Hands,
         back = {name = "Weard Mantle", priority = 40},
         legs = {name = "Sakpata's Cuisses", priority = 114},

@@ -175,7 +175,12 @@ gear.Herc_TA_feet = {
     augments = {'Accuracy+13 Attack+13', '"Triple Atk."+4', 'STR+1', 'Attack+5'}
 }
 
- gear.Herc_MAB_head = { name="Herculean Helm", augments={'Attack+22','"Mag.Atk.Bns."+27','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
+gear.Herc_MAB_head = {
+    name = "Herculean Helm",
+    augments = {
+        'Attack+22', '"Mag.Atk.Bns."+27', 'Mag. Acc.+20 "Mag.Atk.Bns."+20'
+    }
+}
 
 -- Odyssean
 gear.Odyssean_Feet_SIRD = {}
