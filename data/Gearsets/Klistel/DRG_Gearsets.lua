@@ -110,11 +110,10 @@ sets.precast.WS = {
     neck = "Fotia Gorget",
     ear1 = "Sherida Earring",
     ear2 = "Moonshade Earring",
-    waist = "Sailfi Belt +1",
     ring1 = "Regal Ring",
     ring2 = "Niqmaddu Ring",
-    back = gear.DRG_WS_STR_WSD_Cape
-    --    waist="Fotia Belt",
+    back = gear.DRG_WS_STR_WSD_Cape,
+    waist="Fotia Belt",
 }
 
 sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {

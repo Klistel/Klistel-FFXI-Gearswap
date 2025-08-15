@@ -137,7 +137,7 @@ function init_gear_sets()
     gear.AF_Body = {name = "Reverence Surcoat +2", priority = 244}
     gear.AF_Hands = {name = "Reverence Gauntlets +1", priority = 69}
     gear.AF_Legs = {name = "Reverence Breeches +1", priority = 102}
-    gear.AF_Feet = {name = "Reverence Leggings +2", priority = 72}
+    gear.AF_Feet = {name = "Reverence Leggings +3", priority = 72}
 
     gear.Relic_Head = {name = "Caballarius Coronet +1", priority = 96}
     gear.Relic_Body = {name = "Caballarius Surcoat +1", priority = 118}
@@ -145,11 +145,11 @@ function init_gear_sets()
     gear.Relic_Legs = {name = "Caballarius Breeches +1", priority = 52}
     gear.Relic_Feet = {name = "Caballarius Leggings +1", priority = 43}
 
-    gear.Empy_Head = {name = "Chevalier's Armet +2", priority = 135}
+    gear.Empy_Head = {name = "Chevalier's Armet +3", priority = 135}
     gear.Empy_Body = {name = "Chevalier's Cuirass +2", priority = 141}
     gear.Empy_Hands = {name = "Chevalier's Gauntlets +2", priority = 54}
-    gear.Empy_Legs = {name = "Chevalier's Cuisses +2", priority = 117}
-    gear.Empy_Feet = {name = "Chevalier's Sabatons +2", priority = 42}
+    gear.Empy_Legs = {name = "Chevalier's Cuisses +3", priority = 117}
+    gear.Empy_Feet = {name = "Chevalier's Sabatons +3", priority = 42}
 
     gear.JSE_Neck = "Knight's Bead Necklace +2"
 
@@ -379,8 +379,7 @@ function init_gear_sets()
         ring1 = {name = "Epaminondas's Ring", priority = 0},
         ring2 = {name = "Cornelia's Ring", priority = 0},
         back = gear.PLD_WSD_Cape,
-        -- waist = {name = "Fotia Belt", priority = 0},
-        waist = {name = "Sailfi Belt +1", priority = 0},
+        waist = {name = "Fotia Belt", priority = 0},
         legs = {name = "Sulev. Cuisses +2", priority = 50},
         feet = {name = "Sulev. Leggings +2", priority = 20}
     }
@@ -712,7 +711,7 @@ function init_gear_sets()
                                      {ring2 = "Sheltered Ring"})
 
     sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
-        --main = {name = "Sakpata's Sword", priority = 100},
+        main = {name = "Sakpata's Sword", priority = 100},
         hands = gear.Souveran_C_Hands,
         back = {name = "Weard Mantle", priority = 40},
         legs = {name = "Sakpata's Cuisses", priority = 114},
@@ -720,15 +719,15 @@ function init_gear_sets()
     })
     sets.midcast.Phalanx.SIRD = set_combine(
                                     sets.midcast['Enhancing Magic'].SIRD, {
-            --main = {name = "Sakpata's Sword", priority = 100},
-           -- sub = {name = "Duban", priority = 0},
+            main = {name = "Sakpata's Sword", priority = 100},
+            sub = {name = "Duban", priority = 0},
             hands = gear.Souveran_C_Hands,
             back = {name = "Weard Mantle", priority = 40},
             feet = gear.Souveran_D_Feet
         })
     sets.midcast.Phalanx.DT = set_combine(sets.midcast.Phalanx.SIRD, {})
     sets.Phalanx_Received = {
-        --main = {name = "Sakpata's Sword", priority = 100},
+        main = {name = "Sakpata's Sword", priority = 100},
         hands = gear.Souveran_C_Hands,
         back = {name = "Weard Mantle", priority = 40},
         legs = {name = "Sakpata's Cuisses", priority = 114},
@@ -816,8 +815,7 @@ function init_gear_sets()
         ring2 = {name = "Vexer Ring +1", priority = 55},
         --ring2 = {name = "Shadow Ring", priority = 0},
         back = gear.PLD_Enmity_Cape,
-        waist = {name = "Creed Baudrier", priority = 40},
-        --waist = {name = "Flume Belt +1", priority = 0},
+        waist = {name = "Flume Belt +1", priority = 0},
         legs = gear.Empy_Legs,
         feet = gear.AF_Feet
     }
@@ -896,14 +894,12 @@ function init_gear_sets()
     ear1 = {name = "Creed Earring", priority = 30},
     ear2 = {name = "Chevalier's Earring", priority = 0},
     body = {name = "Sakpata's Breastplate", priority = 136},
-    --hands = gear.Souveran_C_Hands,
     hands = gear.Souveran_C_Hands,
     ring1 = {name = "Moonlight Ring", priority = 110, bag = "wardrobe3"},
     ring2 = {name = "Vexer Ring +1", priority = 55},
     --ring2 = {name = "Shadow Ring", priority = 0},
     back = gear.PLD_Enmity_Cape,
-    waist = {name = "Creed Baudrier", priority = 40},
-    --waist = {name = "Flume Belt +1", priority = 0},
+    waist = {name = "Flume Belt +1", priority = 0},
     legs = gear.Empy_Legs,
     feet = gear.AF_Feet
 }
@@ -1175,6 +1171,7 @@ function file_unload()
     send_command('unbind !numpad.')
     send_command('unbind ^numpad+')
     send_command('unbind ^numpadenter')
+    send_command('unbind !numpadenter')
     send_command('unbind ^numlock')
 
     send_command('unbind ^numpad/')

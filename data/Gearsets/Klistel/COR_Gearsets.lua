@@ -145,8 +145,7 @@ sets.precast.WS = {
     ring1 = "Dingir Ring",
     ring2 = "Cornelia's Ring",
     back = gear.COR_WS_RA_Cape,
-    --    waist="Fotia Belt",
-    waist = "Sailfi Belt +1"
+    waist="Fotia Belt"
 }
 
 sets.precast.WS['Last Stand'] = sets.precast.WS
@@ -166,7 +165,7 @@ sets.precast.WS['Wildfire'] = {
     ring1 = "Dingir Ring",
     ring2 = "Cornelia's Ring",
     back = gear.COR_WS_MAB_Cape,
-    waist = "Skrymir Cord +1"
+    waist = "Orpheus's Sash"
 }
 
 sets.precast.WS['Hot Shot'] = sets.precast.WS['Wildfire']
@@ -189,8 +188,7 @@ sets.precast.WS['Evisceration'] = {
     ring1 = "Regal Ring",
     ring2 = "Ilabrat Ring",
     back = gear.COR_WS_MELEE_Cape,
-    --    waist="Fotia Belt",   Synergy (Abyssea)
-    waist = "Sailfi Belt +1"
+    waist="Fotia Belt"
 }
 
 sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
@@ -255,7 +253,7 @@ sets.midcast.CorsairShot = {
     ring1 = "Dingir Ring",
     ring2 = "Fenrir Ring +1",
     back = gear.COR_WS_MAB_Cape,
-    waist = "Skrymir Cord +1"
+    waist = "Orpheus's Sash"
 }
 
 sets.midcast.CorsairShot.STP = {
