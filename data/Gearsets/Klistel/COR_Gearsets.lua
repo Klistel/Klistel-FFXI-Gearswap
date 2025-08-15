@@ -165,7 +165,7 @@ sets.precast.WS['Wildfire'] = {
     ring1 = "Dingir Ring",
     ring2 = "Cornelia's Ring",
     back = gear.COR_WS_MAB_Cape,
-    waist = "Orpheus's Sash"
+    waist = "Skrymir Cord +1",
 }
 
 sets.precast.WS['Hot Shot'] = sets.precast.WS['Wildfire']
@@ -253,7 +253,7 @@ sets.midcast.CorsairShot = {
     ring1 = "Dingir Ring",
     ring2 = "Fenrir Ring +1",
     back = gear.COR_WS_MAB_Cape,
-    waist = "Orpheus's Sash"
+    waist = "Skrymir Cord +1",
 }
 
 sets.midcast.CorsairShot.STP = {
