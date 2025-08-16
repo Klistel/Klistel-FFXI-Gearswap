@@ -47,9 +47,9 @@ gear.COR_WS_RA_Cape = {
 gear.COR_FC_Cape = {
     name = "Camulus's Mantle",
     augments = {
-        'AGI+20', 'Eva.+20 /Mag. Eva.+20', 'Evasion+6', '"Fast Cast"+10'
+        'AGI+20', 'Eva.+20 /Mag. Eva.+20', 'Evasion+10', '"Fast Cast"+10'
     }
-} --
+} -- *
 
 gear.DRG_TP_Cape = {
     name = "Brigantia's Mantle",
@@ -88,8 +88,8 @@ gear.DRG_WS_STR_CRIT = {
 } -- *
 gear.DRG_Haste_Cape = {
     name = "Brigantia's Mantle",
-    augments = {'DEX+20', 'Accuracy+20 Attack+20', 'Haste +10'}
-} -- not done DEX+10 Dye
+    augments = {'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Haste +10'}
+} -- *
 
 gear.SMN_PhysCape = {
     name = "Campestres's Cape",
@@ -113,36 +113,32 @@ gear.SMN_FC_Cape = {
 gear.PLD_Enmity_Cape = {
     name = "Rudianos's Mantle",
     augments = {
-        'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Enmity+10',
+        'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+6', 'Enmity+10',
         'Chance of successful block +5'
     },
     priority = 60
-} -- Not Done 'Mag. Eva +10' Dye and more resin
+} -- Not Done need 4 more dye
 gear.PLD_DD_TP_Cape = {
     name = "Rudianos's Mantle",
-    augments = {
-        'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', '"Dbl.Atk."+10',
-        'Damage taken-5%'
-    }
-} -- not done
+    augments = {'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10'},
+    priority = 0
+} -- Need DEX+10 Dye
 gear.PLD_WSD_Cape = {
     name = "Rudianos's Mantle",
-    augments = {'STR+20', 'Accuracy+19 Attack+19', 'Weapon skill damage +10%'}
-} -- lol I fucked up. Also needs +10 STR Dye
+    augments = {'STR+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'},
+    priority = 0
+} --  needs +10 STR Dye
 gear.PLD_FC_Cape = {
     name = "Rudianos's Mantle",
-    augments = {
-        'INT+20', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10'
-    }
-} -- not done
+    augments = {'INT+20', 'Eva.+20 /Mag. Eva.+20', '"Fast Cast"+10'},
+    priority = 0
+} -- 'Mag. Evasion+10' Dye
 
 gear.PLD_DT_Cape = {
     name = "Rudianos's Mantle",
-    augments = {
-        'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', 'Enmity+10',
-        'Damage taken-5%'
-    }
-} -- not done
+    augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Enmity+10'},
+    priority = 60
+} -- not done 'Mag. Evasion+10' Dye
 
 ------------------------------------------------------------------------------------------------
 ---------------------------------------- AugGear -----------------------------------------------

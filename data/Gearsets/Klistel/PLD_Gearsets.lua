@@ -137,7 +137,7 @@ function init_gear_sets()
     gear.AF_Body = {name = "Reverence Surcoat +2", priority = 244}
     gear.AF_Hands = {name = "Reverence Gauntlets +1", priority = 69}
     gear.AF_Legs = {name = "Reverence Breeches +1", priority = 102}
-    gear.AF_Feet = {name = "Reverence Leggings +3", priority = 72}
+    gear.AF_Feet = {name = "Reverence Leggings +4", priority = 72}
 
     gear.Relic_Head = {name = "Caballarius Coronet +1", priority = 96}
     gear.Relic_Body = {name = "Caballarius Surcoat +1", priority = 118}
